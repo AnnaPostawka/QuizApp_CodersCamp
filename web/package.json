@@ -36,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && prettier --write src/**/*.{js,css,json,jsx}"
+      "pre-commit": "prettier --write src/**/*.{js,css,json,jsx}"
     }
   }
 }
