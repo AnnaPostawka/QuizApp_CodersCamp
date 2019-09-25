@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class LandingView extends Component {
+export default class LoginView extends Component {
 	render() {
 		return <div>Hello World!</div>;
 	}

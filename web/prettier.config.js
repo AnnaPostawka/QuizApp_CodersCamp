@@ -5,6 +5,6 @@ module.exports = {
 	semi: true,
 	quoteProps: "as-needed",
 	bracketSpacing: true,
-	arrowParens: "avoid",
-	parser: "babel"
+	arrowParens: "avoid"
+	// parser: "babel"
 };
