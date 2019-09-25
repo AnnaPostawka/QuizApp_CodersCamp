@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src && echo \"Lint complete.\"",
+    "watch": "watch \"text&cls && npm run -s lint && node ./src/app.js\" src",
+    "start": "node ./src/app.js",
+    "pretty": "prettier ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.5",
+    "prettier": "^1.18.2",
+    "watch": "^1.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && prettier --write src/**/*.{js,css,json}"
+    }
+  }
+}
