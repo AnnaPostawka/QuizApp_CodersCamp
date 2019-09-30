@@ -1,8 +1,8 @@
 const { User, validate } = require("../models/userModel");
-const bcrypt = require('bcrypt');
-const _ = require('lodash');
+const bcrypt = require("bcrypt");
+const _ = require("lodash");
 
-class UserController {
+const UserController = {
 	async registerUser(req, res) {
 		const { error } = validate(req.body);
 		if (error) return res.status(400).send(error.details[0].message);
@@ -15,6 +15,6 @@ class UserController {
 		user.password = await bcrypt.hash(user.password, salt);
 		await user.save();
 	}
-}
+};
 
 export default UserController;
