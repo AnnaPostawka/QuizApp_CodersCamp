@@ -8,12 +8,12 @@ class Quiz extends React.Component {
     }
 
     mapStateToProps(state) {
-        
+
     }
 
     mapDispatchToProps() {
         return {
-
+            
         }
     }
 
