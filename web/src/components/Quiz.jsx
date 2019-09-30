@@ -1,25 +1,23 @@
 import React from "react";
 import QuizList from "./QuizList";
 import { connect } from "react-redux";
+import { fetchQuiz } from "../redux/actions/quiz";
 
 class Quiz extends React.Component {
-    componentDidMount() {
+	componentDidMount() {
+		this.props.fetchQuiz();
+	}
 
-    }
-
-    mapStateToProps(state) {
-
-    }
-
-    mapDispatchToProps() {
-        return {
-            
-        }
-    }
-
-    render() {
-        return <QuizList questionsList={} />
-    }
+	render() {
+		return <QuizList questionsList={this.props.questionsList} />;
+	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Quiz)
+const mapStateToProps = state => {
+	return { questionsList: state.questionsList }
+};
+
+export default connect(
+	mapStateToProps,
+	{ fetchQuiz }
+)(Quiz);
