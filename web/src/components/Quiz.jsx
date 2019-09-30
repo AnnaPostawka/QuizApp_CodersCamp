@@ -5,7 +5,7 @@ import { fetchQuiz } from "../redux/actions/quiz";
 
 class Quiz extends React.Component {
 	componentDidMount() {
-		this.props.fetchQuiz();
+		this.props.fetchQuiz("https://opentdb.com/api.php?amount=10");
 	}
 
 	render() {
