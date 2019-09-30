@@ -26,5 +26,9 @@
     "hooks": {
       "pre-commit": "npm run lint && prettier --write src/**/*.{js,css,json}"
     }
+  },
+  "dependencies": {
+    "joi": "^14.3.1",
+    "mongoose": "^5.7.1"
   }
 }
