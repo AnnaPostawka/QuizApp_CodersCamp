@@ -1,0 +1,13 @@
+.formView {
+	padding-left: 26px;
+}
+.formView__title {
+	color: white;
+	font-size: 36px;
+}
+.form {
+	width: 324px;
+}
+.btn__text{
+	font-size: 24px;
+}
