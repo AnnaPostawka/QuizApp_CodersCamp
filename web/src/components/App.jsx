@@ -1,13 +1,12 @@
 import React from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import LoginView from "../views/LoginView";
-import RouterContextToReduxProvider from "./RouterContextToReduxProvider";
+import HashRouter from "./ReduxedHashRouter";
 
 export default function App() {
 	return (
 		<HashRouter>
-			<RouterContextToReduxProvider />
 			<Switch>
 				<Route to="/" component={LoginView} />
 			</Switch>
