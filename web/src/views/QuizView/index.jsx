@@ -1,41 +1,41 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchQuiz } from "../../redux/actions/fetchQuiz";
-import { Title } from "antd/lib/typography/Title";
 import Question from "../../components/Question";
+import { Spin, Skeleton } from "antd";
 
 class QuizView extends React.Component {
 	componentDidMount() {
 		this.props.fetchQuiz("https://opentdb.com/api.php?amount=10");
 	}
 
-	generateAnswersOrLoader() {
-		if (this.props.questionsList.length > 0) return this.generateAnswers();
+	generateQuestionOrLoader() {
+		if (this.props.questionsList.length > 0) return this.generateQuestion();
 		else return this.generateLoader();
 	}
 
 	generateLoader() {
-		return <div>This will be a loader in the future</div>;
+        return <Spin tip="Loading..." size="large">
+            <Skeleton active />
+        </Spin>;
 	}
 
-	generateAnswers() {
+	generateQuestion() {
 		return (
 			<div>
-				{/* <Title level={2}>Some title</Title> */}
 				<Question question={this.props.questionsList[0]} />
 			</div>
 		);
 	}
 
 	render() {
-		return this.generateAnswersOrLoader();
+		return <div>{this.generateQuestionOrLoader()}</div>;
 	}
 }
 
 const mapStateToProps = state => {
 	return {
-		questionsList: state.questionsList,
-		currentQuestionIndex: state.currentQuestionIndex
+		questionsList: state.questionsList
 	};
 };
 
