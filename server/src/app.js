@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -9,6 +10,9 @@ mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
+
+app.use(express.json());
+app.use("/", userRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}...`);
