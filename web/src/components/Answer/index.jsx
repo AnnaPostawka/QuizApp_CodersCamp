@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "antd";
-import entityToChar from "../utils/entityToChar";
+import entityToChar from "../../utils/entityToChar";
 
 export default class Answer extends React.Component {
 	render() {
