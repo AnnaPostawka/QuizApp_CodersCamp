@@ -1,8 +1,9 @@
 import React from "react";
-import Answer from "./Answer/";
+import Answer from "../Answer";
+import "./style.css";
 
 export default class AnswersList extends React.Component {
-    generateShuffledAnswers() {
+	generateShuffledAnswers() {
 		const answersList = [<Answer correct="true">{this.props.question.correct_answer}</Answer>];
 
 		answersList.push(
@@ -24,6 +25,6 @@ export default class AnswersList extends React.Component {
 	}
 
 	render() {
-		return <div>{this.generateShuffledAnswers()}</div>;
+		return <div className="question__answers">{this.generateShuffledAnswers()}</div>;
 	}
 }
