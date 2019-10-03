@@ -1,8 +1,10 @@
 import "antd/dist/antd.css";
 import React, { Component } from "react";
+import {Button} from "antd";
 import QuizOptionWrapper from "./quizOptionWrapper";
 import QuizOptionSelect from "./quizOptionSelect";
 import QuizOptionRadio from "./quizOptionRadio";
+import QuizOptionNumberPicker from "./quizOptionNumberPicker";
 
 export default class QuizConfigView extends Component {
 	constructor(props){
@@ -33,29 +35,105 @@ export default class QuizConfigView extends Component {
 			{val:"30", desc:"Science: Gadgets"},
 			{val:"31", desc:"Entertainment: Japanese Anime & Manga"},
 			{val:"32", desc:"Entertainment: Cartoon & Animations"}		
+		];
+
+		this.difficulties=[
+			{val:"any", desc:"any"},
+			{val:"easy", desc:"easy"},
+			{val:"medium", desc:"medium"},
+			{val:"hard", desc:"hard"}
 		]
+
+		this.questionTypes=[
+			{val:"any", desc:"any"},
+			{val:"multiple", desc:"multiple choice"},
+			{val:"boolean", desc:"true/false"}
+		]
+
+		this.state = {
+			questionsNumber: 10,
+			category: "any",
+			difficulty: "any",
+			type: "any"
+		};
+		this.baseUrl = "https://opentdb.com/api.php?";
+	}
+
+	/*onFromSubmit(e) {
+		e.preventDefault();
+	}*/
+
+	onConfirmButtonClick(){
+		console.log(this.state);
+		console.log(this.buildApiUrlFromState());
+	}
+
+	onConfigOptionChange(key,value){
+		if(typeof key !== "string"){
+			throw new TypeError("config option key must be a string");
+		}
+		this.setState({[key]: value});
+	}
+
+	buildApiUrlFromState(){
+		let url = this.baseUrl;
+		url+="amount="+(this.state.questionsNumber);
+		if (this.state.category && this.state.category!=="any"){
+			url+="&category="+encodeURIComponent(this.state.category);
+		}
+		if (this.state.difficulty && this.state.difficulty!=="any"){
+			url+="&difficulty="+encodeURIComponent(this.state.difficulty);
+		}
+		if (this.state.type && this.state.type!=="any"){
+			url+="&type="+encodeURIComponent(this.state.type);
+		}
+		return url;
 	}
 
 	render() {
 		return (
 		<div>
+			<QuizOptionWrapper title="Number of questions">
+				<QuizOptionNumberPicker
+								min={1}
+								max={50}
+								default={10}
+								optionKey="questionsNumber"
+								onOptionChange={this.onConfigOptionChange.bind(this)}
+				/>
+			</QuizOptionWrapper>
+
 			<QuizOptionWrapper title="Category">
-				<QuizOptionSelect selected={this.categories[0].val} options={this.categories} />
+				<QuizOptionSelect 
+								optionKey="category"
+								selected={this.state.category}
+								options={this.categories}
+								onOptionChange={this.onConfigOptionChange.bind(this)}
+				/>
 			</QuizOptionWrapper>
+
 			<QuizOptionWrapper title="Difficulty">
-				<QuizOptionRadio selected="any" options={[
-										{val:"any", desc:"any"},
-										{val:"easy", desc:"easy"},
-										{val:"medium", desc:"medium"},
-										{val:"hard", desc:"hard"}
-										]} />
+				<QuizOptionRadio 
+								optionKey="difficulty"
+								selected={this.state.difficulty}
+								options={this.difficulties}
+								onOptionChange={this.onConfigOptionChange.bind(this)} 
+				/>
 			</QuizOptionWrapper>
-			<QuizOptionWrapper title="Choice type">
-				<QuizOptionRadio selected="any" options={[
-										{val:"any", desc:"any"},
-										{val:"multiple", desc:"multiple choice"},
-										{val:"boolean", desc:"true/false"}
-										]} />
+
+			<QuizOptionWrapper title="Question type">
+				<QuizOptionRadio
+								optionKey="type"
+								selected={this.state.type}
+								options={this.questionTypes}
+								onOptionChange={this.onConfigOptionChange.bind(this)} 
+				/>
+			</QuizOptionWrapper>
+
+			<QuizOptionWrapper>
+				<Button type="primary" onClick={this.onConfirmButtonClick.bind(this)}>
+					Create quiz!
+				</Button>
 			</QuizOptionWrapper>
 		</div>
 		);

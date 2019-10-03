@@ -9,6 +9,7 @@ export default class QuizOptionRadio extends Component {
 
     onChange(e) {
         this.setState({value: e.target.value});
+        this.props.onOptionChange(this.props.optionKey, e.target.value);
     }
 
 	render() {
@@ -22,6 +23,6 @@ export default class QuizOptionRadio extends Component {
                     }
                 )}
             </Radio.Group>
-            );
+        );
 	}
 }
