@@ -8,10 +8,10 @@ export default class Question extends React.Component {
 	checkAnswer = () => {};
 
 	render() {
-		return (
+		return (    
 			<div className="question">
-				<QuestionHeader>{this.props.question.question}</QuestionHeader>
-				<AnswersList question={this.props.question} />
+				<QuestionHeader />
+				<AnswersList />
 				<Button block={true} type="primary">
 					Check answer
 				</Button>

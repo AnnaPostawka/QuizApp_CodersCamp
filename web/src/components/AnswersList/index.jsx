@@ -1,13 +1,14 @@
 import React from "react";
 import Answer from "../Answer";
+import { connect } from "react-redux";
 import "./style.css";
 
-export default class AnswersList extends React.Component {
+class AnswersList extends React.Component {
 	generateShuffledAnswers() {
-		const answersList = [<Answer correct="true">{this.props.question.correct_answer}</Answer>];
+		const answersList = [<Answer correct="true">{this.props.question.current.correct_answer}</Answer>];
 
 		answersList.push(
-			...this.props.question.incorrect_answers.map(answer => (
+			...this.props.question.current.incorrect_answers.map(answer => (
 				<Answer correct="false">{answer}</Answer>
 			))
 		);
@@ -28,3 +29,11 @@ export default class AnswersList extends React.Component {
 		return <div className="question__answers">{this.generateShuffledAnswers()}</div>;
 	}
 }
+
+const mapStateToProps = state => {
+	return {
+		question: state.question
+	};
+};
+
+export default connect(mapStateToProps)(AnswersList);

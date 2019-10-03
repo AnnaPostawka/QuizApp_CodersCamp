@@ -2,7 +2,7 @@ import { QUESTION_INDEX_INCREMENT } from "../actions/incrementQuestionIndex";
 import { QUESTION_SET } from "../actions/setQuestion";
 
 const defaultState = {
-	index: 0,
+	index: 1,
 	current: null
 };
 
@@ -16,7 +16,7 @@ export default (state = defaultState, action) => {
 		case QUESTION_SET:
 			return {
 				...state,
-				question: action.payload
+				current: action.payload
 			};
 		default:
 			return state;
