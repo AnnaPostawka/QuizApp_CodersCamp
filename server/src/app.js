@@ -1,8 +1,11 @@
-const mongoose = require("mongoose");
-const express = require("express");
 const cors = require("cors");
+const dotenv = require("dotenv");
+const express = require("express");
+const mongoose = require("mongoose");
 
-require("dotenv").config();
+const usersRouter = require("./routes/userRoutes");
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -10,18 +13,18 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// fixing deprecation warnings
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useFindAndModify", false);
-mongoose.set("useCreateIndex", true);
-mongoose.set("useUnifiedTopology", true);
+app.use("/users", usersRouter);
 
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}...`);
 
-	//connect to database
 	const uri = process.env.DB_URI;
 	if (!uri) throw new Error("Environmental variable DB_URI is missing.");
+
+	mongoose.set("useNewUrlParser", true);
+	mongoose.set("useFindAndModify", false);
+	mongoose.set("useCreateIndex", true);
+	mongoose.set("useUnifiedTopology", true);
 
 	mongoose
 		.connect(uri)

@@ -1,24 +1,30 @@
 const Joi = require("@hapi/joi");
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
-	email: {
-		type: String,
-		required: true,
-		minlength: 5,
-		maxlength: 255,
-		unique: true
+const userSchema = new mongoose.Schema(
+	{
+		email: {
+			type: String,
+			required: true,
+			minlength: 5,
+			maxlength: 255,
+			unique: true
+		},
+		password: {
+			type: String,
+			required: true,
+			minlength: 5,
+			maxlength: 1024
+		}
 	},
-	password: {
-		type: String,
-		required: true,
-		minlength: 5,
-		maxlength: 1024
+	{
+		timestamps: true
 	}
-});
+);
 
 const User = mongoose.model("User", userSchema);
 
+/*
 function validateUser(user) {
 	const schema = {
 		email: Joi.string()
@@ -32,8 +38,9 @@ function validateUser(user) {
 			.required()
 	};
 
-	return Joi.validate(user, schema);
-}
+  return Joi.validate(user, schema);
+  
+module.exports = validateUser;
+}*/
 
-exports.User = User;
-exports.validate = validateUser;
+module.exports = User;
