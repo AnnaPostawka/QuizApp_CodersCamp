@@ -14,7 +14,9 @@
 }
 
 .question__counter {
-	position: absolute;
+    position: absolute;
+    font-size: 0.75rem;
+    font-style: italic;
 	top: 7px;
 	left: 7px;
 }
