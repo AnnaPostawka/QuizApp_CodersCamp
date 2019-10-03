@@ -13,7 +13,15 @@ const UserController = {
 		user = new User(_.pick(req.body, ["email", "password"]));
 		const salt = await bcrypt.genSalt(10);
 		user.password = await bcrypt.hash(user.password, salt);
-		await user.save();
+
+		try {
+			await user.save();
+			res.status(200).send(`User ${user.email} registered successfuly.`);
+		} catch(e) {
+			res.status(400).send("Registering new user failed.");
+			console.log(e);
+		}
+
 	}
 };
 
