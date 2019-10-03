@@ -3,3 +3,11 @@
 *::after:global {
 	box-sizing: border-box;
 }
+:root{
+	--primary-color:white;
+}
+@media(min-width:1440px){
+	:root{
+	--primary-color:black;
+}
+}

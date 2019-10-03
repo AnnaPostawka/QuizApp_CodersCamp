@@ -2,10 +2,18 @@
 	text-align: center;
 	font-size: 18px;
 	color: rgba(249, 248, 248, 0.79);
-	margin-bottom: 15px;
+	padding:25px 0 15px 0;
 }
-.footer__link{
-	color: white;
+.footer__link {
+	color: var(--primary-color);
 	margin-left: 5px;
 	font-weight: bold;
+}
+@media(min-width:1440px){
+	.footer{
+		color:var(--primary-color);
+	}
+	.footer__link {
+		color: var(--primary-color);
+	}
 }

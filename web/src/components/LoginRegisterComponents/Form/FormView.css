@@ -2,12 +2,28 @@
 	padding-left: 26px;
 }
 .formView__title {
-	color: white;
+	color: var(	--primary-color);
 	font-size: 36px;
 }
 .form {
 	width: 324px;
 }
-.btn__text{
+.btn__text {
 	font-size: 24px;
+}
+@media(min-width:1440px){
+	.formView {
+		padding: 0 75px 0 75px;
+	}
+	.formView__title {
+		font-size: 64px;
+		font-weight: bold;
+		margin-bottom: 150px;
+	}
+	.form {
+		width: 100%;
+	}
+	.btn__text {
+		font-size: 36px;
+	}
 }

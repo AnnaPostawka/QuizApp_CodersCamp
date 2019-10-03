@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "antd";
 import "./FormView.css";
-import FormItem from '../FormItem';
+import FormItem from "../FormItem";
 
 class Form extends Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ class Form extends Component {
 		this.state = {
 			username: "",
 			password: "",
-			email: "",
+			email: ""
 		};
 	}
 	handleInputChange = e => {
@@ -31,18 +31,19 @@ class Form extends Component {
 						name="username"
 						type="text"
 						value={this.state.username}
-						handleInputChange={this.handleInputChange} />
+						handleInputChange={this.handleInputChange}
+					/>
 					<div>
-						{this.props.isRegister
-							? <FormItem
+						{this.props.isRegister ? (
+							<FormItem
 								text="E-mail"
 								id="email"
 								name="email"
 								type="email"
 								value={this.state.email}
-								handleInputChange={this.handleInputChange} />
-							: null
-						}
+								handleInputChange={this.handleInputChange}
+							/>
+						) : null}
 					</div>
 					<FormItem
 						text="Password"
@@ -50,9 +51,10 @@ class Form extends Component {
 						name="password"
 						type="password"
 						value={this.state.password}
-						handleInputChange={this.handleInputChange} />
+						handleInputChange={this.handleInputChange}
+					/>
 					<Button htmlType="submit" size="large" block>
-						<span className="btn__text">{this.props.formType}</span>
+						<span className="btn__text">{this.props.btnText}</span>
 					</Button>
 				</form>
 			</div>

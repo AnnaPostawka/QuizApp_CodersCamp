@@ -3,7 +3,7 @@ import Wrapper from "../../components/LoginRegisterComponents/Wrapper";
 
 class LoginView extends Component {
 	render() {
-		return <Wrapper view="Login" />
+		return <Wrapper view="Login" />;
 	}
 }
 export default LoginView;
