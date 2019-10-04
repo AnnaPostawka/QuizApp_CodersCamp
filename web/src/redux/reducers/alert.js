@@ -1,4 +1,4 @@
-import { ADD_ALERT_TYPE, REMOVE_ALERT_TYPE } from "../actions/alert";
+import { ADD_ALERT_TYPE, REMOVE_ALERT_TYPE, REMOVE_ALL_ALERTS_TYPE } from "../actions/alert";
 
 const alertReducer = (alerts = [], action) => {
 	if (action.type === ADD_ALERT_TYPE) {
@@ -9,6 +9,8 @@ const alertReducer = (alerts = [], action) => {
 		});
 
 		return alerts;
+	} else if (action.type === REMOVE_ALL_ALERTS_TYPE) {
+		return [];
 	}
 
 	return alerts;

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { removeAlert } from "../../redux/actions/alert";
+import { removeAlert, removeAllAlerts } from "../../redux/actions/alert";
 import { Drawer, Button, Alert } from "antd";
 
 const alertMargin = { marginBottom: "0.5em" };
@@ -11,6 +11,7 @@ class AlertContainer extends React.Component {
 		this.state = {
 			visible: false
 		};
+		this.deleteAllAlertsButtonRef = React.createRef();
 	}
 
 	renderListOfAlerts() {
@@ -26,10 +27,40 @@ class AlertContainer extends React.Component {
 						message={alert.alertContent}
 						type="error"
 						style={alertMargin}
+						showIcon
 					/>
 				);
 			});
 		}
+	}
+
+	renderRemoveNotificationsButton() {
+		const buttonText = "Remove all notifications";
+
+		const button = (
+			<Button
+				block
+				onClick={this.onClickRemoveAllAlerts.bind(this)}
+				style={alertMargin}
+				size="small"
+				disabled
+			>
+				{buttonText}
+			</Button>
+		);
+
+		if (this.props.alerts.length > 0)
+			return React.cloneElement(button, {
+				disabled: false
+			});
+		else
+			return React.cloneElement(button, {
+				disabled: true
+			});
+	}
+
+	onClickRemoveAllAlerts(event) {
+		this.props.removeAllAlerts();
 	}
 
 	showDrawer(event) {
@@ -50,10 +81,11 @@ class AlertContainer extends React.Component {
 				<Button onClick={this.showDrawer.bind(this)}>Open Drawer</Button>
 				<Drawer
 					placement="right"
-					closeable="false"
+					closable={false}
 					onClose={this.closeDrawer.bind(this)}
 					visible={this.state.visible}
 				>
+					{this.renderRemoveNotificationsButton()}
 					{this.renderListOfAlerts()}
 				</Drawer>
 			</div>
@@ -70,6 +102,7 @@ const mapStateToProps = state => {
 export default connect(
 	mapStateToProps,
 	{
-		removeAlert
+		removeAlert,
+		removeAllAlerts
 	}
 )(AlertContainer);
