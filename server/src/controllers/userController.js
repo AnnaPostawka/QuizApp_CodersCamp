@@ -17,12 +17,11 @@ const UserController = {
 		try {
 			await user.save();
 			res.status(200).send(`User ${user.email} registered successfuly.`);
-		} catch(e) {
+		} catch (e) {
 			res.status(400).send("Registering new user failed.");
 			console.log(e);
 		}
-
 	}
 };
 
-module.exports = UserController; 
+module.exports = UserController;
