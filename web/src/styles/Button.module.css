@@ -2,3 +2,7 @@
     padding: 10px !important;
     height: unset !important;
 }
+
+.button::after {
+    display: none !important;
+}

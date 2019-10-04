@@ -6,13 +6,11 @@ import styles from "./AnswersList.module.css";
 
 class AnswersList extends React.Component {
 	generateShuffledAnswers() {
-		const answersList = [
-			this.props.question.current.correct_answer,
-			...this.props.question.current.incorrect_answers
-		];
+        const question = this.props.questionsList[this.props.question];
+		const answersList = [question.correct_answer, ...question.incorrect_answers];
 
 		this.shuffleArray(answersList);
-		this.setIndex(answersList);
+		this.setIndex(answersList, question);
 
 		return answersList.map((answer, index) => (
 			<Answer key={index} index={index}>
@@ -28,8 +26,8 @@ class AnswersList extends React.Component {
 		}
 	}
 
-	setIndex(answersList) {
-		const correct_answer = this.props.question.current.correct_answer;
+	setIndex(answersList, question) {
+		const correct_answer = question.correct_answer;
 		let correctIndex;
 
 		for (let i = 0; i < answersList.length; ++i) {
@@ -48,6 +46,7 @@ class AnswersList extends React.Component {
 
 const mapStateToProps = state => {
 	return {
+		questionsList: state.questionsList,
 		question: state.question
 	};
 };

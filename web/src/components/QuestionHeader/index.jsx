@@ -6,11 +6,14 @@ import styles from "./QuestionHeader.module.css";
 class QuestionHeader extends React.Component {
 	render() {
 		return (
-            <div className={styles.question__header}>
-                <div className={styles.question__counter}>
-					Question {this.props.question.index + 1} / {this.props.questionsList.length}
-				</div>
-				<div>{entityToChar(this.props.question.current.question)}</div>
+			<div className={styles.question__header}>
+				<div className={styles.question__counter}>
+					Question {this.props.question + 1} / {this.props.questionsList.length}
+                </div>
+                <div className={styles.question__points}>
+                    Points: {this.props.points}
+                </div>
+				<div>{entityToChar(this.props.questionsList[this.props.question].question)}</div>
 			</div>
 		);
 	}
@@ -19,7 +22,8 @@ class QuestionHeader extends React.Component {
 const mapStateToProps = state => {
 	return {
 		questionsList: state.questionsList,
-		question: state.question
+        question: state.question,
+        points: state.points
 	};
 };
 

@@ -20,3 +20,12 @@
 	top: 7px;
 	left: 7px;
 }
+
+.question__points {
+    position: absolute;
+    font-size: 0.75rem;
+    font-size: italic;
+    top: 7px;
+    right: 7px;
+    text-align: right;
+}

@@ -5,7 +5,6 @@ import QuestionHeader from "../QuestionHeader";
 import { connect } from "react-redux";
 import { incrementQuestionIndex } from "../../redux/actions/incrementQuestionIndex";
 import { setAnswerFinished } from "../../redux/actions/setAnswerFinished";
-import { setQuestion } from "../../redux/actions/setQuestion";
 import styles from "./Question.module.css";
 
 class Question extends React.Component {
@@ -13,9 +12,9 @@ class Question extends React.Component {
 		this.props.answer.finished ? this.changeQuestion() : this.showCorrectAnswer();
 	};
 
-    changeQuestion() {
-        this.props.setAnswerFinished(false);
-        this.props.incrementQuestionIndex();
+	changeQuestion() {
+		this.props.setAnswerFinished(false);
+		this.props.incrementQuestionIndex();
 	}
 
 	showCorrectAnswer() {
@@ -56,7 +55,6 @@ export default connect(
 	mapStateToProps,
 	{
 		setAnswerFinished,
-		setQuestion,
 		incrementQuestionIndex
 	}
 )(Question);

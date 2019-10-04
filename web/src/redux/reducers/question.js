@@ -1,23 +1,9 @@
 import { QUESTION_INDEX_INCREMENT } from "../actions/incrementQuestionIndex";
-import { QUESTION_SET } from "../actions/setQuestion";
 
-const defaultState = {
-	index: 0,
-	current: null
-};
-
-export default (state = defaultState, action) => {
+export default (state = 0, action) => {
 	switch (action.type) {
-		case QUESTION_INDEX_INCREMENT:
-			return {
-				...state,
-				index: state.index + 1
-			};
-		case QUESTION_SET:
-			return {
-				...state,
-				current: action.payload
-			};
+        case QUESTION_INDEX_INCREMENT:
+            return state + 1;
 		default:
 			return state;
 	}
