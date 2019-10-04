@@ -1,0 +1,5 @@
+*:global,
+*::before:global,
+*::after:global {
+	box-sizing: border-box;
+}
