@@ -2,7 +2,7 @@ import { QUESTION_INDEX_INCREMENT } from "../actions/incrementQuestionIndex";
 import { QUESTION_SET } from "../actions/setQuestion";
 
 const defaultState = {
-	index: 1,
+	index: 0,
 	current: null
 };
 

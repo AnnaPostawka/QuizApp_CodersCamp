@@ -3,15 +3,27 @@ import { Button } from "antd";
 import AnswersList from "../AnswersList";
 import QuestionHeader from "../QuestionHeader";
 import { connect } from "react-redux";
+import { incrementQuestionIndex } from "../../redux/actions/incrementQuestionIndex";
+import { setAnswerFinished } from "../../redux/actions/setAnswerFinished";
+import { setQuestion } from "../../redux/actions/setQuestion";
 import styles from "./Question.module.css";
 
 class Question extends React.Component {
 	onClick = () => {
-		// TODO:: implement
+		this.props.answer.finished ? this.changeQuestion() : this.showCorrectAnswer();
 	};
 
+    changeQuestion() {
+        this.props.setAnswerFinished(false);
+        this.props.incrementQuestionIndex();
+	}
+
+	showCorrectAnswer() {
+		this.props.setAnswerFinished(true);
+	}
+
 	generateButtonText() {
-		return "lalalala";
+		return this.props.answer.finished ? "Next question" : "Check answer";
 	}
 
 	render() {
@@ -34,8 +46,17 @@ class Question extends React.Component {
 
 const mapStateToProps = state => {
 	return {
-		answer: state.answer
+		answer: state.answer,
+		questionList: state.questionList,
+		question: state.question
 	};
 };
 
-export default connect(mapStateToProps)(Question);
+export default connect(
+	mapStateToProps,
+	{
+		setAnswerFinished,
+		setQuestion,
+		incrementQuestionIndex
+	}
+)(Question);

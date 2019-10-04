@@ -8,7 +8,7 @@ class QuestionHeader extends React.Component {
 		return (
             <div className={styles.question__header}>
                 <div className={styles.question__counter}>
-					Question {this.props.question.index} / {this.props.questionsList.length}
+					Question {this.props.question.index + 1} / {this.props.questionsList.length}
 				</div>
 				<div>{entityToChar(this.props.question.current.question)}</div>
 			</div>
