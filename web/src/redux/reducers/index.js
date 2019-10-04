@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import questionsList from "./questionsList";
 import question from "./question";
-import answerIndex from "./answerIndex";
+import answer from "./answer";
 
-export default combineReducers({ questionsList, question, answerIndex });
+export default combineReducers({ questionsList, question, answerIndex: answer });

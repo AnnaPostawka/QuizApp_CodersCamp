@@ -8,7 +8,8 @@ import Timer from "react-compound-timer";
 import styles from "./QuizView.module.css";
 
 class QuizView extends React.Component {
-	componentDidMount() {
+    constructor(props) {
+        super(props);
 		this.props.fetchQuiz("https://opentdb.com/api.php?amount=10");
 	}
 

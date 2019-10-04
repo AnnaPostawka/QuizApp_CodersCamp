@@ -14,7 +14,11 @@ class AnswersList extends React.Component {
 		this.shuffleArray(answersList);
 		this.setIndex(answersList);
 
-		return answersList.map((answer, index) => <Answer key={index}>{answer}</Answer>);
+		return answersList.map((answer, index) => (
+			<Answer key={index} index={index}>
+				{answer}
+			</Answer>
+		));
 	}
 
 	shuffleArray(arr) {
@@ -28,7 +32,11 @@ class AnswersList extends React.Component {
 		const correct_answer = this.props.question.current.correct_answer;
 		let correctIndex;
 
-		for (let index in answersList) if (answersList[index] === correct_answer) correctIndex = index;
+		for (let i = 0; i < answersList.length; ++i) {
+			if (answersList[i] === correct_answer) {
+				correctIndex = i;
+			}
+		}
 
 		if (correctIndex) this.props.setAnswerIndex(correctIndex);
 	}
