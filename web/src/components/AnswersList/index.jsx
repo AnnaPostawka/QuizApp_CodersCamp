@@ -1,21 +1,20 @@
 import React from "react";
 import Answer from "../Answer";
 import { connect } from "react-redux";
+import { setAnswerIndex } from "../../redux/actions/setAnswerIndex";
 import styles from "./AnswersList.module.css";
 
 class AnswersList extends React.Component {
 	generateShuffledAnswers() {
-		const answersList = [<Answer>{this.props.question.current.correct_answer}</Answer>];
-
-		answersList.push(
-			...this.props.question.current.incorrect_answers.map(answer => (
-				<Answer>{answer}</Answer>
-			))
-		);
+		const answersList = [
+			this.props.question.current.correct_answer,
+			...this.props.question.current.incorrect_answers
+		];
 
 		this.shuffleArray(answersList);
+		this.setIndex(answersList);
 
-		return answersList;
+		return answersList.map((answer, index) => <Answer key={index}>{answer}</Answer>);
 	}
 
 	shuffleArray(arr) {
@@ -25,8 +24,17 @@ class AnswersList extends React.Component {
 		}
 	}
 
+	setIndex(answersList) {
+		const correct_answer = this.props.question.current.correct_answer;
+		let correctIndex;
+
+		for (let index in answersList) if (answersList[index] === correct_answer) correctIndex = index;
+
+		if (correctIndex) this.props.setAnswerIndex(correctIndex);
+	}
+
 	render() {
-        return <div className={styles.question__answers}>{this.generateShuffledAnswers()}</div>;
+		return <div className={styles.question__answers}>{this.generateShuffledAnswers()}</div>;
 	}
 }
 
@@ -36,4 +44,7 @@ const mapStateToProps = state => {
 	};
 };
 
-export default connect(mapStateToProps)(AnswersList);
+export default connect(
+	mapStateToProps,
+	{ setAnswerIndex }
+)(AnswersList);
