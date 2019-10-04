@@ -30,11 +30,13 @@ class QuizView extends React.Component {
 		);
 	}
 
-    generateQuestionOrFinisher() {
-        return this.props.questionsList[this.props.question] === undefined ?
-            `You've just finished the quiz with ${this.props.points} points!` :
-            <Question question={this.props.questionsList[this.props.question]} />
-    }
+	generateQuestionOrFinisher() {
+		return this.props.questionsList[this.props.question] === undefined ? (
+			`You've just finished the quiz with ${this.props.points} points!`
+		) : (
+			<Question question={this.props.questionsList[this.props.question]} />
+		);
+	}
 
 	generateContent() {
 		return (
@@ -44,8 +46,8 @@ class QuizView extends React.Component {
 						<Timer.Hours />:<Timer.Minutes />:<Timer.Seconds />
 					</Timer>
 				</div>
-                <Divider className={styles.content__divider} />
-                {this.generateQuestionOrFinisher()}
+				<Divider className={styles.content__divider} />
+				{this.generateQuestionOrFinisher()}
 			</>
 		);
 	}
@@ -65,8 +67,8 @@ class QuizView extends React.Component {
 const mapStateToProps = state => {
 	return {
 		questionsList: state.questionsList,
-        question: state.question,
-        points: state.points
+		question: state.question,
+		points: state.points
 	};
 };
 

@@ -8,16 +8,16 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
 	switch (action.type) {
-        case ANSWER_INDEX_SET:
-            return {
-                ...state,
-                index: action.payload
-            }
-        case ANSWER_FINISHED_SET:
-            return {
-                ...state,
-                finished: action.payload
-            }
+		case ANSWER_INDEX_SET:
+			return {
+				...state,
+				index: action.payload
+			};
+		case ANSWER_FINISHED_SET:
+			return {
+				...state,
+				finished: action.payload
+			};
 		default:
 			return state;
 	}

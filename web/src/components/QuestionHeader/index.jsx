@@ -9,10 +9,8 @@ class QuestionHeader extends React.Component {
 			<div className={styles.question__header}>
 				<div className={styles.question__counter}>
 					Question {this.props.question + 1} / {this.props.questionsList.length}
-                </div>
-                <div className={styles.question__points}>
-                    Points: {this.props.points}
-                </div>
+				</div>
+				<div className={styles.question__points}>Points: {this.props.points}</div>
 				<div>{entityToChar(this.props.questionsList[this.props.question].question)}</div>
 			</div>
 		);
@@ -22,8 +20,8 @@ class QuestionHeader extends React.Component {
 const mapStateToProps = state => {
 	return {
 		questionsList: state.questionsList,
-        question: state.question,
-        points: state.points
+		question: state.question,
+		points: state.points
 	};
 };
 

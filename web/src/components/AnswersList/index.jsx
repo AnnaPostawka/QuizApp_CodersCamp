@@ -6,7 +6,7 @@ import styles from "./AnswersList.module.css";
 
 class AnswersList extends React.Component {
 	generateShuffledAnswers() {
-        const question = this.props.questionsList[this.props.question];
+		const question = this.props.questionsList[this.props.question];
 		const answersList = [question.correct_answer, ...question.incorrect_answers];
 
 		this.shuffleArray(answersList);

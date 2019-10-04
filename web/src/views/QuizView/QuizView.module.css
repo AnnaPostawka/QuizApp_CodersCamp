@@ -5,10 +5,10 @@
 	min-height: 100vh;
 	width: 100%;
 	display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: min-content;
-    grid-gap: 0px;
-    line-height: 1 !important;
+	grid-gap: 0px;
+	line-height: 1 !important;
 }
 
 .content {
@@ -19,8 +19,8 @@
 }
 
 .content__timer {
-    float: right;
-    font-size: 1.1rem;
+	float: right;
+	font-size: 1.1rem;
 }
 
 .content__divider {
