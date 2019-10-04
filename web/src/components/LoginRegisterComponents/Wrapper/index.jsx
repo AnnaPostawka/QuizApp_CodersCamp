@@ -27,7 +27,16 @@ const Views = {
 };
 
 const Wrapper = ({ view }) => {
-	const { title, description, formType, btnText, footerText, linkText, linkPath, isRegister } = Views[view];
+	const {
+		title,
+		description,
+		formType,
+		btnText,
+		footerText,
+		linkText,
+		linkPath,
+		isRegister
+	} = Views[view];
 	return (
 		<div className="wrapper">
 			<TopBar title={title} description={description} />

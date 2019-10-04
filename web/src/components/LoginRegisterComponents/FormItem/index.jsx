@@ -6,6 +6,7 @@ const FormItem = props => {
 	return (
 		<div className="form__group">
 			<input
+				placeholder="&nbsp;"
 				className="form__input"
 				id={id}
 				name={name}

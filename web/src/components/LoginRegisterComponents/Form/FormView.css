@@ -2,18 +2,25 @@
 	padding-left: 26px;
 }
 .formView__title {
-	color: var(	--primary-color);
+	color: var(--primary-color);
 	font-size: 36px;
+	margin-bottom: 40px;
 }
 .form {
 	width: 324px;
 }
-.btn__text {
-	font-size: 24px;
+.form__validateInfo{
+	position: relative;
+	color: red;
+	font-weight: bold;
+	font-size: 17px;
+	margin: 0;
+	padding: 0;
+	top: -92px;
 }
-@media(min-width:1440px){
+@media (min-width: 1440px) {
 	.formView {
-		padding: 0 75px 0 75px;
+		padding: 0 75px;
 	}
 	.formView__title {
 		font-size: 64px;
@@ -22,8 +29,5 @@
 	}
 	.form {
 		width: 100%;
-	}
-	.btn__text {
-		font-size: 36px;
 	}
 }
