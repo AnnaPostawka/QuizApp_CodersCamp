@@ -6,3 +6,7 @@
     width: 100%;
     align-content: space-between;
 }
+
+.question__button {
+    composes: button from "../../styles/Button.module.css";
+}

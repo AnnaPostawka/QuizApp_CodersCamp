@@ -1,15 +1,15 @@
 import React from "react";
 import Answer from "../Answer";
 import { connect } from "react-redux";
-import "./style.css";
+import styles from "./AnswersList.module.css";
 
 class AnswersList extends React.Component {
 	generateShuffledAnswers() {
-		const answersList = [<Answer correct="true">{this.props.question.current.correct_answer}</Answer>];
+		const answersList = [<Answer>{this.props.question.current.correct_answer}</Answer>];
 
 		answersList.push(
 			...this.props.question.current.incorrect_answers.map(answer => (
-				<Answer correct="false">{answer}</Answer>
+				<Answer>{answer}</Answer>
 			))
 		);
 
@@ -26,7 +26,7 @@ class AnswersList extends React.Component {
 	}
 
 	render() {
-		return <div className="question__answers">{this.generateShuffledAnswers()}</div>;
+        return <div className={styles.question__answers}>{this.generateShuffledAnswers()}</div>;
 	}
 }
 

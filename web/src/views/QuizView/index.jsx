@@ -5,7 +5,7 @@ import { setQuestion } from "../../redux/actions/setQuestion";
 import Question from "../../components/Question";
 import { Spin, Skeleton, PageHeader, Divider } from "antd";
 import Timer from "react-compound-timer";
-import "./style.css";
+import styles from "./QuizView.module.css";
 
 class QuizView extends React.Component {
 	componentDidMount() {
@@ -27,7 +27,7 @@ class QuizView extends React.Component {
 
 	generateLoader() {
 		return (
-			<div className="spinner">
+            <div className={styles.spinner}>
 				<Spin tip="Loading..." size="large">
 					<Skeleton active />
 				</Spin>
@@ -38,12 +38,12 @@ class QuizView extends React.Component {
 	generateContent() {
 		return (
 			<>
-				<div className="content__timer">
+                <div className={styles.content__timer}>
 					<Timer formatValue={val => (val < 10 ? `0${val}` : val)}>
 						<Timer.Hours />:<Timer.Minutes />:<Timer.Seconds />
 					</Timer>
 				</div>
-				<Divider className="content__divider" />
+                <Divider className={styles.content__divider} />
 				<Question question={this.props.questionsList[0]} />
 			</>
 		);
@@ -51,9 +51,9 @@ class QuizView extends React.Component {
 
 	render() {
 		return (
-			<div className="layout">
-				<PageHeader title="Back" className="back" onBack />
-				<div id="content" className="content">
+            <div className={styles.layout}>
+                <PageHeader title="Back" className={styles.back} onBack />
+                <div id="content" className={styles.content}>
 					{this.generateContentOrLoader()}
 				</div>
 			</div>

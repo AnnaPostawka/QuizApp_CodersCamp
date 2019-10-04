@@ -1,0 +1,4 @@
+.question__answer {
+    composes: button from "../../styles/Button.module.css";
+    text-align: left !important;
+}
