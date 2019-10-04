@@ -6,8 +6,10 @@ import { setAnswerFinished } from "../../redux/actions/setAnswerFinished";
 import { incrementPoints } from "../../redux/actions/incrementPoints";
 import styles from "./Answer.module.css";
 
+const defaultState = { class: styles.question__answer, clicked: false };
+
 class Answer extends React.Component {
-	state = { class: styles.question__answer };
+	state = defaultState;
 
 	static getDerivedStateFromProps(props, state) {
 		if (props.answer.finished) {
@@ -15,22 +17,22 @@ class Answer extends React.Component {
 				return {
 					class: styles["question__answer--correct"]
 				};
-			else return null;
 		} else {
-			if (state.class !== styles.question__answer) return { class: styles.question__answer };
-			return null;
+			if (state.clicked)
+				return {
+					class: styles["question__answer--wrong"],
+					clicked: false
+				};
+			return defaultState;
 		}
 	}
 
 	onClick = () => {
-        if (!this.props.answer.finished) {
-            this.props.setAnswerFinished(true);
+		if (!this.props.answer.finished) {
+			this.props.setAnswerFinished(true);
+			this.setState({ clicked: true });
 
-			if (this.props.index === this.props.answer.index) {
-				this.props.incrementPoints();
-			} else {
-				this.state = { class: styles["question__answer--wrong"] };
-			}
+			if (this.props.index === this.props.answer.index) this.props.incrementPoints();
 		}
 	};
 
