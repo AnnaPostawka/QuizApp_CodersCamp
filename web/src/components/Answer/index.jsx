@@ -17,6 +17,7 @@ class Answer extends React.Component {
 				return {
 					class: styles["question__answer--correct"]
 				};
+			return null;
 		} else {
 			if (state.clicked)
 				return {

@@ -27,16 +27,15 @@ class AnswersList extends React.Component {
 	}
 
 	setIndex(answersList, question) {
-		const correct_answer = question.correct_answer;
-		let correctIndex;
+		let correctIndex = -1;
 
 		for (let i = 0; i < answersList.length; ++i) {
-			if (answersList[i] === correct_answer) {
+			if (answersList[i] === question.correct_answer) {
 				correctIndex = i;
 			}
 		}
 
-		if (correctIndex) this.props.setAnswerIndex(correctIndex);
+		if (correctIndex !== -1) this.props.setAnswerIndex(correctIndex);
 	}
 
 	render() {
