@@ -6,7 +6,7 @@ import { addAlert } from "../../redux/actions/alert";
 
 class LoginView extends Component {
 	onButtonClickHandler(e) {
-		this.props.alertsAddAlerts("Henlo!");
+		this.props.alertsAddAlerts("Henlo!", "Here have your basic info", "warning");
 	}
 
 	render() {

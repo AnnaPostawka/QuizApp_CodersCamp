@@ -4,4 +4,4 @@ import { routerContext } from "./routerContext";
 import { history } from "./history";
 import { alertReducer } from "./alert";
 
-export default combineReducers({ test, routerContext, history });
+export default combineReducers({ test, routerContext, history, alertReducer });
