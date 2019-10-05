@@ -1,9 +1,14 @@
+const config = require("config");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 
 const userRoutes = require("./routes/userRoutes");
+
+if (!config.get("jwtPrivateKey")) {
+	throw new Error("Environmental variable jwtPrivateKey is missing.");
+}
 
 dotenv.config();
 
