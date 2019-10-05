@@ -1,14 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
 import { removeAlert, removeAllAlerts } from "../../redux/actions/alert";
-import { Drawer, Button, Alert, Badge } from "antd";
+import { Drawer, Button, Alert, Badge, Typography } from "antd";
 
-const alertMargin = { marginBottom: "0.5em" };
-const fixedPosition = {
+const { Text } = Typography;
+
+const drawerChildrenMarginStyle = { marginBottom: "0.5em" };
+const openDrawerButtonFixedStyle = {
 	position: "fixed",
-	right: "60px",
-	bottom: "30px"
+	right: "20px",
+	bottom: "20px"
 };
+const justifyContentStyle = {
+	display: "flex",
+	flexWrap: "nowrap",
+	justifyContent: "space-between"
+};
+const drawerBodyStyle = { padding: "16px" };
+const removeNotificationButtonStyle = { marginBottom: "1.5em", width: "180px" };
 
 class AlertContainer extends React.Component {
 	constructor(props) {
@@ -37,19 +46,27 @@ class AlertContainer extends React.Component {
 	renderListOfAlerts() {
 		if (this.props.alerts.length > 0) {
 			return this.props.alerts.map(alert => {
+				let alertTime = `${alert.timestamp.getHours()}:${alert.timestamp.getMinutes()}`;
+				let alertDate = alert.timestamp.toLocaleDateString();
 				return (
-					<Alert
-						key={alert.id}
-						closable
-						onClose={() => {
-							this.props.removeAlert(alert.id);
-						}}
-						message={alert.message}
-						description={alert.description}
-						type={alert.type}
-						style={alertMargin}
-						showIcon
-					/>
+					<div>
+						<div style={justifyContentStyle}>
+							<Text type="secondary">{alertTime}</Text>
+							<Text type="secondary">{alertDate}</Text>
+						</div>
+						<Alert
+							key={alert.id}
+							closable
+							onClose={() => {
+								this.props.removeAlert(alert.id);
+							}}
+							message={alert.message}
+							description={alert.description}
+							type={alert.type}
+							style={drawerChildrenMarginStyle}
+							showIcon
+						/>
+					</div>
 				);
 			});
 		}
@@ -60,9 +77,8 @@ class AlertContainer extends React.Component {
 
 		const button = (
 			<Button
-				block
 				onClick={this.onClickRemoveAllAlerts.bind(this)}
-				style={alertMargin}
+				style={removeNotificationButtonStyle}
 				size="small"
 				disabled
 			>
@@ -71,9 +87,13 @@ class AlertContainer extends React.Component {
 		);
 
 		if (this.props.alerts.length > 0)
-			return React.cloneElement(button, {
-				disabled: false
-			});
+			return (
+				<div>
+					{React.cloneElement(button, {
+						disabled: false
+					})}
+				</div>
+			);
 		else
 			return React.cloneElement(button, {
 				disabled: true
@@ -83,20 +103,22 @@ class AlertContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				<div style={fixedPosition}>
+				<div style={openDrawerButtonFixedStyle}>
 					<Badge count={this.props.alerts.length}>
 						<Button
 							shape="circle"
 							onClick={this.showDrawer.bind(this)}
 							icon="notification"
+							size="large"
 						></Button>
 					</Badge>
 				</div>
 				<Drawer
 					placement="right"
-					closable={false}
+					closable={true}
 					onClose={this.closeDrawer.bind(this)}
 					visible={this.state.visible}
+					bodyStyle={drawerBodyStyle}
 				>
 					{this.renderRemoveNotificationsButton()}
 					{this.renderListOfAlerts()}
