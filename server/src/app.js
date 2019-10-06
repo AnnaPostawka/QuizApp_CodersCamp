@@ -24,7 +24,6 @@ app.listen(PORT, () => {
 
 	const uri = process.env.DB_URI;
 	if (!uri) throw new Error("Environmental variable DB_URI is missing.");
-
 	mongoose.set("useNewUrlParser", true);
 	mongoose.set("useFindAndModify", false);
 	mongoose.set("useCreateIndex", true);

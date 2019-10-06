@@ -3,9 +3,18 @@ import questionsList from "./questionsList";
 import question from "./question";
 import answer from "./answer";
 import points from "./points";
-import { test } from "./test";
 import { routerContext } from "./routerContext";
 import { history } from "./history";
 import { alertReducer } from "./alert";
+import quizConfig from "./quizConfig";
 
-export default combineReducers({ questionsList, question, answer, points, test, routerContext, history, alertReducer });
+export default combineReducers({
+	questionsList,
+	question,
+	answer,
+	points,
+	routerContext,
+	history,
+	alertReducer,
+	quizConfig
+});

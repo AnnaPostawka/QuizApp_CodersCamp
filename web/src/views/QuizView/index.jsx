@@ -9,7 +9,7 @@ import styles from "./QuizView.module.css";
 class QuizView extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props.fetchQuiz("https://opentdb.com/api.php?amount=10");
+		this.props.fetchQuiz(this.props.quizConfigUrl);
 	}
 
 	generateContentOrLoader() {
@@ -66,6 +66,8 @@ class QuizView extends React.Component {
 
 const mapStateToProps = state => {
 	return {
+		theState: state,
+		quizConfigUrl: state.quizConfig.configUrl,
 		questionsList: state.questionsList,
 		question: state.question,
 		points: state.points
