@@ -1,20 +1,29 @@
 import axios from "axios";
+import { addAlert } from "./alert";
+import { startRequest, endRequest } from "./request";
 
-export const AUTHENTICATED = "authenticated_user";
-export const AUTHENTICATION_ERROR = "authentication_error";
+export const LOGGED_IN = "LOGGED_IN";
 
-const url = "https://supreme-potato-255105.appspot.com/";
+const url = "https://supreme-potato-255105.appspot.com";
 export function login(username, password) {
 	// zwraca funkcje, więc do akcji wchodzi redux thunk
+	const email = username;
 	return async function(dispatch) {
-		dispatch({ type: ADD_ALERT_TYPE });
+		dispatch(startRequest());
 		try {
-			const response = await axios.post(`${url}/login`, { username, password });
-			dispatch({ type: AUTHENTICATED });
-			dispatch({ type: SET_HISTORY, payload: "/config" });
+			const response = await axios.post(`${url}/login`, { email, password });
+			localStorage.setItem("token", response.data);
+			dispatch({ type: LOGGED_IN, payload: response.data });
 		} catch (error) {
-			dispatch({ type: AUTHENTICATED_ERROR, payload: "There is no such user." });
+			console.error(error);
+			dispatch(
+				addAlert(
+					"Error while logging",
+					error.message || error.response ? error.response.data : error.data || error.toString()
+				)
+			);
+		} finally {
+			dispatch(endRequest());
 		}
-		dispatch({ type: REMOVE_ALERT_TYPE });
 	};
 }

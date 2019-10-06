@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import styles from "./FormView.module.css";
 import validation from "./form-validation";
 import FormItem from "../FormItem";
@@ -36,13 +36,13 @@ class Form extends Component {
 	};
 	handleSubmit = e => {
 		e.preventDefault();
+		const { isRegister } = this.props;
 		const { username, email, password } = this.state;
-		if (!isRegister) {
-			this.props.login(username, password);
-		} else {
-			this.props.login(username, email, password);
-		}
-		const checkValidation = validation(this.state);
+		const checkValidation = validation({
+			email,
+			password,
+			username: isRegister ? useEffect : "sa"
+		});
 		if (!checkValidation.correctForm) {
 			this.setState({
 				errors: {
@@ -51,6 +51,12 @@ class Form extends Component {
 					password: checkValidation.password
 				}
 			});
+		} else {
+			if (!this.props.isRegister) {
+				this.props.login(email, password);
+			} else {
+				this.props.register(username, email, password);
+			}
 		}
 	};
 	render() {
@@ -62,29 +68,31 @@ class Form extends Component {
 					className={[styles.formView__form, styles.form].join(" ")}
 					noValidate
 				>
-					<FormItem
-						text="Username"
-						id="username"
-						name="username"
-						type="text"
-						value={this.state.username}
-						handleInputChange={this.handleInputChange}
-					/>
+					{this.props.isRegister ? (
+						<FormItem
+							text="Username"
+							id="username"
+							name="username"
+							type="text"
+							value={this.state.username}
+							handleInputChange={this.handleInputChange}
+						/>
+					) : null}
 					{this.state.errors.username && (
 						<span className={styles.form__validateInfo}>
 							{this.validationMessages.emptyUsername}
 						</span>
 					)}
-					{this.props.isRegister ? (
-						<FormItem
-							text="E-mail"
-							id="email"
-							name="email"
-							type="email"
-							value={this.state.email}
-							handleInputChange={this.handleInputChange}
-						/>
-					) : null}
+
+					<FormItem
+						text="E-mail"
+						id="email"
+						name="email"
+						type="email"
+						value={this.state.email}
+						handleInputChange={this.handleInputChange}
+					/>
+
 					{this.state.errors.email && this.props.isRegister && (
 						<span className={styles.form__validateInfo}>{this.validationMessages.noEmail}</span>
 					)}
