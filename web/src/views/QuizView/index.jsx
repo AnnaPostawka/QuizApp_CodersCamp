@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import { fetchQuiz } from "../../redux/actions/fetchQuiz";
 import { cleanQuestions } from "../../redux/actions/cleanQuestions.js";
 import Question from "../../components/Question";
-import { Spin, Skeleton, PageHeader, Divider } from "antd";
+import { Spin, Skeleton, Divider } from "antd";
 import Timer from "react-compound-timer";
 import styles from "./QuizView.module.css";
 import forceRedirect from "../../hoc/forceRedirect";
+import NavigationButton from "../../components/NavigationButton";
 import { Prompt } from "react-router-dom";
 
 class QuizView extends React.Component {
@@ -56,6 +57,10 @@ class QuizView extends React.Component {
 		);
 	}
 
+	onBackButtonClick() {
+		this.props.history.goBack();
+	}
+
 	componentWillUnmount() {
 		this.props.cleanQuestions();
 	}
@@ -63,16 +68,9 @@ class QuizView extends React.Component {
 	render() {
 		return (
 			<div className={styles.layout}>
-				<PageHeader
-					title="Back"
-					className={styles.back}
-					onBack={() => {
-						this.setState({ backClicked: true });
-						console.log(this.props);
-						this.props.history.goBack();
-					}}
-				/>
-				<Prompt when={this.state.backClicked} message="Are you sure? Your quiz will be lost." />
+				<NavigationButton direction="back" onClick={this.onBackButtonClick.bind(this)}>
+					Back
+				</NavigationButton>
 				<div id="content" className={styles.content}>
 					{this.generateContentOrLoader()}
 				</div>
