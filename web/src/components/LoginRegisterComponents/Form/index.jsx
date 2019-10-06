@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./FormView.module.css";
+import validation from "./form-validation";
 import FormItem from "../FormItem";
 import Button from "../Button";
 
@@ -30,33 +31,10 @@ class Form extends Component {
 			[name]: value
 		});
 	};
-	checkValidation = () => {
-		let username = true;
-		let password = true;
-		let email = true;
-		let correctForm = true;
-		if (this.state.username.length !== 0) {
-			username = false;
-		}
-		if (this.state.email.length >= 5 && this.state.email.indexOf("@") !== -1) {
-			email = false;
-		}
-		if (this.state.password.length >= 6) {
-			password = false;
-		}
-		if (username || email || password) {
-			correctForm = false;
-		}
-		return {
-			username,
-			email,
-			password,
-			correctForm
-		};
-	};
+
 	handleSubmit = e => {
 		e.preventDefault();
-		const checkValidation = this.checkValidation();
+		const checkValidation = validation(this.state);
 		if (checkValidation.correctForm) {
 			this.setState({
 				username: "",
@@ -82,7 +60,11 @@ class Form extends Component {
 		return (
 			<div className={styles.formView}>
 				<h2 className={styles.formView__title}>{this.props.formType}</h2>
-				<form onSubmit={this.handleSubmit} className={[styles.formView__form, styles.form].join(' ')} noValidate>
+				<form
+					onSubmit={this.handleSubmit}
+					className={[styles.formView__form, styles.form].join(" ")}
+					noValidate
+				>
 					<FormItem
 						text="Username"
 						id="username"
@@ -92,7 +74,9 @@ class Form extends Component {
 						handleInputChange={this.handleInputChange}
 					/>
 					{this.state.errors.username && (
-						<span className={styles.form__validateInfo}>{this.validationMessages.emptyUsername}</span>
+						<span className={styles.form__validateInfo}>
+							{this.validationMessages.emptyUsername}
+						</span>
 					)}
 					{this.props.isRegister ? (
 						<FormItem
