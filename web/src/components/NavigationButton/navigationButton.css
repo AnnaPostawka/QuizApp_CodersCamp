@@ -1,0 +1,13 @@
+.navbutton-wrapper .ant-btn-link {
+	color: black;
+	font-weight: 600;
+	font-size: 1.8em;
+	padding: 0.2em 0.5em 1em;
+	height: 2em;
+	margin: 0.5em;
+	text-align: left;
+}
+
+.navbutton-wrapper .ant-btn-link .anticon {
+	transform: scale(0.8);
+}
