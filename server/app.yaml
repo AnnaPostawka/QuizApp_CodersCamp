@@ -1,0 +1,5 @@
+runtime: nodejs10
+
+env_variables:
+  DB_URI: mongodb+srv://admin:admin@cluster0-i3dgp.gcp.mongodb.net/test?retryWrites=true&w=majority
+  supremePotato_jwtPrivateKey: suprisemotherfuckerlongprivatekey
