@@ -1,14 +1,16 @@
 //import "antd/dist/antd.css";
 import "./quizconfig.css";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import {Button, PageHeader} from "antd";
 import QuizOptionWrapper from "./quizOptionWrapper";
 import QuizOptionSelect from "./quizOptionSelect";
 import QuizOptionRadio from "./quizOptionRadio";
 import QuizOptionNumberPicker from "./quizOptionNumberPicker";
 import QuizConfigWrapper from "./quizConfigWrapper";
+import { RECORD_QUIZ_CONFIG } from "../../redux/actions/recordQuizConfig";
 
-export default class QuizConfigView extends Component {
+class QuizConfigView extends Component {
 	constructor(props){
 		super(props);
 		this.categories=[
@@ -58,16 +60,17 @@ export default class QuizConfigView extends Component {
 			difficulty: "any",
 			type: "any"
 		};
-		this.baseUrl = "https://opentdb.com/api.php?";
 	}
 
-	/*onFromSubmit(e) {
-		e.preventDefault();
-	}*/
-
 	onConfirmButtonClick(){
-		console.log(this.state);
-		console.log(this.buildApiUrlFromState());
+		console.log(this.props);
+		this.props.recordQuizConfig({
+			questionsNumber: this.state.questionsNumber,
+			category: this.state.category,
+			difficulty: this.state.difficulty,
+			type: this.state.type,
+		});
+		this.props.hashHistory.push("/quiz");
 	}
 
 	onConfigOptionChange(key,value){
@@ -75,21 +78,6 @@ export default class QuizConfigView extends Component {
 			throw new TypeError("config option key must be a string");
 		}
 		this.setState({[key]: value});
-	}
-
-	buildApiUrlFromState(){
-		let url = this.baseUrl;
-		url+="amount="+(this.state.questionsNumber);
-		if (this.state.category && this.state.category!=="any"){
-			url+="&category="+encodeURIComponent(this.state.category);
-		}
-		if (this.state.difficulty && this.state.difficulty!=="any"){
-			url+="&difficulty="+encodeURIComponent(this.state.difficulty);
-		}
-		if (this.state.type && this.state.type!=="any"){
-			url+="&type="+encodeURIComponent(this.state.type);
-		}
-		return url;
 	}
 
 	render() {
@@ -144,3 +132,21 @@ export default class QuizConfigView extends Component {
 		);
 	}
 }
+
+const mapStateToProps = (state) => {
+	return {
+		questionsNumber: state.questionsNumber,
+		category: state.category,
+		difficulty: state.difficulty,
+		type: state.type,
+		hashHistory: state.history
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		recordQuizConfig: (config) => dispatch({type: RECORD_QUIZ_CONFIG, payload: config})
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(QuizConfigView)

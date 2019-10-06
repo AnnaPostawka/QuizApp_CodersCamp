@@ -6,6 +6,7 @@ import points from "./points";
 import { routerContext } from "./routerContext";
 import { history } from "./history";
 import { alertReducer } from "./alert";
+import quizConfig from "./quizConfig";
 
 export default combineReducers({
 	questionsList,
@@ -14,5 +15,6 @@ export default combineReducers({
 	points,
 	routerContext,
 	history,
-	alertReducer
+	alertReducer,
+	quizConfig
 });

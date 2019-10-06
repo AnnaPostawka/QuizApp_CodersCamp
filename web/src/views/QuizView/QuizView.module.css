@@ -8,7 +8,6 @@
 	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: min-content;
 	grid-gap: 0px;
-	line-height: 1 !important;
 }
 
 .content {
@@ -24,12 +23,12 @@
 }
 
 .content__divider {
-	background-color: #0003 !important;
+	background-color: #0003;
 }
 
 .back {
-	padding: 0 0 4% 0 !important;
-	height: min-content !important;
+	padding: 0 0 4% 0;
+	height: min-content;
 }
 
 @media (max-width: 768px) {
