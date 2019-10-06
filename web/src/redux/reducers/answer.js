@@ -1,6 +1,6 @@
 import { ANSWER_INDEX_SET } from "../actions/setAnswerIndex";
 import { ANSWER_FINISHED_SET } from "../actions/setAnswerFinished";
-import { CLEAN_QUESTIONS } from "../actions/cleanQuestions"
+import { CLEAN_QUESTIONS } from "../actions/cleanQuestions";
 
 const defaultState = {
 	index: -1,
