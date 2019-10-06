@@ -1,0 +1,6 @@
+QQ0010
+66.	Co daje wyłączenie sumowania (no auto-summary) w przypadku protokołu RIPv2?
+	(a) Protokół zmieni wersję na RIPv1
+	(b) Wystąpi błąd, ponieważ protokół RIPv2 jest klasowy
+	(c) Protokół przestanie sumować adresy do masek klasowych
+	(d) Komenda nie zadziała, ponieważ protokół RIPv2 jej nie obsługuje

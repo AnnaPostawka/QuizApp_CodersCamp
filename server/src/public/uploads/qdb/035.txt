@@ -1,0 +1,7 @@
+QQ00110
+35.	Które stwierdzenia dotyczące forwardowania ramek przez przełącznik są prawdziwe?
+	(a) W przypadku przełączania typu fragment-free przełącznik odczytuje całą ramkę przed przesłaniem jej dalej.
+	(b) Tylko ramki z adresem MAC typu broadcast mogą być wysyłane do wszystkich portów przełącznika z wyjątkiem portu nadawcy.
+	(c) W przypadku połączenia typu cut-through ramki uszkodzone są zawsze forwardowane dalej.
+	(d) W przypadku połączenia typu store-and-forward uszkodzone ramki nie są przekazywane dalej.
+	(e) Decyzja o przekierowaniu ramki jest podejmowana na podstawie jej adresu docelowego.

@@ -1,0 +1,8 @@
+QQ011000
+22.	Zaznacz dwa parametry, które można określić przy użyciu polecenia ping?
+	(a) Adres IP routera najbliżej położonego od urządzenia docelowego
+	(b) Średni czas, jaki potrzebuje pakiet, aby dotrzeć do miejsca przeznaczenia i z powrotem
+	(c) Dostępność urządzenia docelowego w sieci
+	(d) Średni czas, jaki potrzebuje pakiet na dotarcie do każdego pośredniego routera na
+	(e) ścieżce do węzła docelowego i z powrotem
+	(f) Liczbę routerów pomiędzy urządzeniem źródłowym i docelowym

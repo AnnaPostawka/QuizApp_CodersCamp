@@ -1,0 +1,7 @@
+QQ01000
+19.	Wybierz prawdziwe stwierdzenia dotyczące trasy do sieci NET1, która do tablicy routera R1 została dopisana w sposób dynamiczny.
+	(a) Nie mają na nią wpływu zmiany w topologii sieci.
+	(b) Trasa automatycznie aktualizowana i utrzymywana przez protokół routingu.
+	(c) Posiada prefiks C w tablicy routingu
+	(d) Jej dystans administracyjny wynosi 1.
+	(e) Jest to identufikator podinterfejsu

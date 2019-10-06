@@ -1,0 +1,7 @@
+QQ10001
+54.	Które adresy IP zostaną przepuszczone przez podaną poniżej access listę? access-list 10 permit 192.168.16.0 0.0.7.255
+	(a) 192.168.23.0
+	(b) 192.168.0.0
+	(c) 192.168.15.0
+	(d) 192.168.24.0
+	(e) 192.168.16.0

@@ -1,0 +1,7 @@
+QQ01000
+7.	Jakie pole w nagłówku ramki Ethernet jest badane przez urządzenie warstwy 2 w celu przekazania danych
+	(a) Docelowy adres IP
+	(b) Docelowy adres MAC
+	(c) Typ ramki Ethernet
+	(d) Adres źródłowy MAC
+	(e) źródłowy adres IP

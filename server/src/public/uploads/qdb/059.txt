@@ -1,0 +1,7 @@
+QQ00010;img=59.jpg
+59.	Nawiązując do rysunku. Biorąc pod uwagę adres sieciowy 192.168.5.0 i maskę podsieci 255.255.255.224 taką samą dla wszystkich podsieci. Jaka jest całkowita liczba nieużywanych(marnowanych) adresów IP w powyższej topologii? Wybierz jedną odpowiedź
+	(a) 60
+	(b) 68
+	(c) 64
+	(d) 72
+	(e) 56

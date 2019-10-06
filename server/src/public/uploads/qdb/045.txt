@@ -1,0 +1,7 @@
+QQ10000
+45.	Jaka maska podsieci jest reprezentowana przez notację: /20?
+	(a) 255.255.240.0
+	(b) 255.255.224.0
+	(c) 255.255.255.248
+	(d) 255.255.255.248
+	(e) 255.255.255.0

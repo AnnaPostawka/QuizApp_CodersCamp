@@ -1,0 +1,6 @@
+QQ1000;img=27.jpg
+27.	Refer to exhibit. A user issues the command netstat -r on workstation. Which IPv6 address is on of link local addresses of workstation? Wybierz jedną odpowiedź:
+	(a) fe80::30d0:115:3f57:fe4c/128
+	(b) ::1/128
+	(c) fe80::/64
+	(d) 2001:0:9d38:6ab8:30d0:115:3f57:fe4c/128

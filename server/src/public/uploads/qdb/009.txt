@@ -1,0 +1,7 @@
+QQ00100
+9.	Co zrobi urządzenie kiedy w sieci Ethernet odbierze ramkę o długości 1200 bajtów?
+	(a) Usunie ramkę
+	(b) Wyśle komunikat o błędzie do urządzenia wysyłającego
+	(c) Przetwarza ramkę taką jaka jest
+	(d) Uzupełni ramkę losowymi bajtami danych do długości 1500 bajtów, a następnie
+	(e) prześle ją dalej

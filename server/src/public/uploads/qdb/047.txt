@@ -1,0 +1,6 @@
+QQ0100
+47.	Które stwierdzenie najlepiej opisuje docelowy adres IPv4 używany przy transmisji multikastowej?
+	(a) 48-bitowy adres, który jest proporcjonalny do liczby członków grupy multicast.
+	(b) Ten sam adres IP multicast jest używany przez wszystkich odbiorców w grupie.
+	(c) Adres, który współdzieli ostatnie 23 bity ze źródłowym adresem IPv4.
+	(d) Unikatowy adres IP zdefiniowany dla każdego odbiorcy w grupie.

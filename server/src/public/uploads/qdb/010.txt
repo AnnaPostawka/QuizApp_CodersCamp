@@ -1,0 +1,7 @@
+QQ00010
+10.	Jaką wartość posiada adres MAC typu broadcast?
+	(a) b. 11-11-11-11-11-11
+	(b) c. 00:00:00:00:00:00
+	(c) d. 0.0.0.0
+	(d) e. FF-FF-FF-FF-FF-FF
+	(e) f. 255.255.255.255

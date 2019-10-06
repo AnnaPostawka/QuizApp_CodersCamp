@@ -1,0 +1,6 @@
+QQ1000
+70.	Podaj sieć dla adresu IP 192.168.1.130/26 Tylko wartość dziesiętna ostatniego oktetu.
+	(a) 128
+	(b) 256
+	(c) 127
+	(d) 64

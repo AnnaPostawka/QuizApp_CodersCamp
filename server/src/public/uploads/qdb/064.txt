@@ -1,0 +1,6 @@
+QQ0001
+64.	Jakiego adresu należy użyć, aby informacja dotarła do wszystkich urządzeń równocześnie?
+	(a) unicast
+	(b) multicast
+	(c) duplex
+	(d) broadcast

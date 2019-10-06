@@ -1,0 +1,7 @@
+QQ10000;img=26.jpg
+26.	Nawiązując do rysunku : Biorąc pod uwagę adresy juz przypisane i wykorzystane w adresacji z puli 10.16.10.0/24 , jaki adres podsieci mógłby zostac przypisany do sieci zawierającej 25 hostów?
+	(a) 10.16.10.64/27
+	(b) 10.16.10.240/27
+	(c) 10.16.10.128/28
+	(d) 10.16.10.10.160/26
+	(e) 10.16.10.224/26

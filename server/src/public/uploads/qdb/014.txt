@@ -1,0 +1,6 @@
+QQ0001
+14.	Podaj sieć dla adresu IP 192.168.1.110/26 (Trzeba było wpisać samemu)
+	(a) 192.168.1.32
+	(b) 192.168.0.64
+	(c) 192.124.5.64
+	(d) 192.168.1.64

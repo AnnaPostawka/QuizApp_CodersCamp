@@ -1,0 +1,8 @@
+QQ111000
+13.	What three blocks of addresses are defined by RFC 1918 for private network use?
+	(a) 10.0.0.0/8
+	(b) 172.16.0.0/12
+	(c) 192.168.0.0/16
+	(d) 100.64.0.0/14
+	(e) 169.254.0.0/16
+	(f) 239.0.0.0/8

@@ -1,0 +1,7 @@
+QQ01001
+50.	Wybierz dwie cechy protokołu ARP.
+	(a) Jeśli żadne urządzenie nie odpowiada na żądanie ARP, węzeł inicjujący rozsyła pakiet danych do wszystkich urządzeń w segmencie sieci.
+	(b) Jeśli host jest gotowy do wysłania pakietu do urządzenia docelowego w sieci lokalnej i zna jego adres IP, ale nie zna jego adresu MAC, wysyła broadcast ARP
+	(c) Gdy host wstawia pakiet IP do ramki, odwołuje się do tabeli adresów MAC, aby określić mapowanie adresów IP na adresy MAC
+	(d) Zapytanie ARP jest wysyłane do wszystkich urządzeń w lokalnej sieci Ethernet, który zawiera adres IP hosta przeznaczenia i adres multicast MAC
+	(e) Jeśli adres IP urządzenia, które odebrało zapytanie ARP, jest zgodny z docelowym adresem IP z zapytania ARP, urządzenie odpowiada na to żądanie i wysyła nadawcy swój adres MAC

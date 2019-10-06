@@ -1,0 +1,7 @@
+QQ00010
+36.	What is indicated by a successful ping to the ::1 IPv6 address?
+	(a) The host is cabled properly
+	(b) All hosts on the local link are available
+	(c) The default gateway address is correctly configured
+	(d) IP is properly installed on the host. The loopback answers correctly.
+	(e) The link-local address is correctly configured

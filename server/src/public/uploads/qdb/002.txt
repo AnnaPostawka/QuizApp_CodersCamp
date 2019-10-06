@@ -1,0 +1,7 @@
+QQ00110
+2.	Określ dwa powody, dla których administrator powinien podzielić większą sieć na podsieci
+	(a) W celu uproszczenia topologii sieci
+	(b) W celu redukcji liczby potrzebnych routerów
+	(c) W celu ułatwienia wdrażania polityki bezpieczeństwa w przedsiębiorstwie
+	(d) W celu poprawy wydajności sieci
+	(e) W celu redukcji liczby potrzebnych przełączników

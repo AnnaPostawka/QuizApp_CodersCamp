@@ -1,0 +1,7 @@
+QQ00100
+44.	What is the prefix for the host address 2001:DB8:BC15:A:12AB::1/64?
+	(a) 2001:DB8
+	(b) 2001:DB8:BC15:A:12
+	(c) 2001:DB8:BC15:A
+	(d) 2001:DB8:BC15
+	(e) 2001:DB8:BC15:A:1

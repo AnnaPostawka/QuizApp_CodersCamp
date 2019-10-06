@@ -1,0 +1,7 @@
+QQ00001
+3.	Czemu odpowiada liczba w skróconym zapisie maski sieci?
+	(a) Liczba zer w zapisie binarnym maski
+	(b) liczba jedynek i zer w zapisie dziesiętnym maski
+	(c) liczba wszystkich zer w zapisie binarnym maski
+	(d) liczba zer w zapisie dziesiętnym maski
+	(e) Liczba jedynek w zapisie binarnym maski

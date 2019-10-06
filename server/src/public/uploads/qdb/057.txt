@@ -1,0 +1,7 @@
+QQ00010
+57.	Administrator sieci skonfigurował podział na podsieci używając zmiennej długości maski. Najmniejsza podsieć ma maskę 255.255.255.248. Ile użytecznych adresów hostów udostępnia ta podsieć? Wybierz jedną odpowiedż
+	(a) 30
+	(b) 4
+	(c) 14
+	(d) 6
+	(e) 8

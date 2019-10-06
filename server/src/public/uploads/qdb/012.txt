@@ -1,0 +1,9 @@
+QQ0111000
+12.	Zaznacz wszystkie prywatne adresy IP. Wybierz wszystkie poprawne odpowiedzi.
+	(a) 224.0.0.1
+	(b) 192.168.10.172
+	(c) 172.31.23.115
+	(d) 10.168.10.1
+	(e) 127.0.0.1
+	(f) 172.32.50.1
+	(g) 192.16.1.10

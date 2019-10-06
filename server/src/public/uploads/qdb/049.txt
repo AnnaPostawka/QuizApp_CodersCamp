@@ -1,0 +1,6 @@
+QQ0010
+49.	Jakiego typu jest adres IPv6 FE80::1?
+	(a) loopback
+	(b) multicast
+	(c) link-local
+	(d) global-unicast

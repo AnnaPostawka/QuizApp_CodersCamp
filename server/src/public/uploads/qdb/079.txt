@@ -1,0 +1,8 @@
+QQ000010
+79.	Jakich informacji używa przełącznik przy wypełnianiu tablicy MAC adresów? Wybierz jedną odpowiedź.
+	(a) adres MAC celu i nr portu wyjściowego
+	(b) adres MAC celu i nr portu wejściowego
+	(c) adres MAC celu i źródła oraz nr portu wyjściowego
+	(d) adres MAC celu i źródła oraz nr portu wejściowego
+	(e) adres MAC źródła i nr portu wejściowego
+	(f) adres MAC źródła i nr portu wyjściowego

@@ -1,0 +1,6 @@
+QQ0010
+52.	Co dzieje się z pakietem IP przed wysłaniem przez fizyczne medium? Wybierz jedną odpowiedź.
+	(a) Jest dzielony na mniejsze segmenty
+	(b) Jest oznakowany informacjami gwarantującymi niezawodną dostawę
+	(c) Jest pakowany w ramkę warstwy 2
+	(d) Jest pakowany w segment TCP

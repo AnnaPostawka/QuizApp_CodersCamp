@@ -1,0 +1,8 @@
+QQ001110
+48.	Które warstwy modelu OSI zawierają się w najwyższej warstwe stosu protokołu TCP/IP? Wybierz wszystkie poprawne odpowiedzi.
+	(a) Warstwa sieci
+	(b) Warstwa transportowa
+	(c) Warstwa prezentacji
+	(d) Warstwa sesji
+	(e) Warstwa aplikacji
+	(f) Warstwa internetu

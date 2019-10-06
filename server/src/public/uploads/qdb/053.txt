@@ -1,0 +1,6 @@
+QQ0001
+53.	Jak nazywa się paczka danych PDU w warstwie transportowej?
+	(a) bit
+	(b) packet (pakiet)
+	(c) frame (ramka)
+	(d) segment

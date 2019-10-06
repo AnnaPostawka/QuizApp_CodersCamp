@@ -1,0 +1,7 @@
+QQ00100
+5.	Serwer DHCP jest używany do dynamicznego przypisywania adresów IP do hostów sieci. Pula adresów jest skonfigurowana jako 192.168.10.0/24. W tej sieci są 3 drukarki, które muszą korzystać z zastrzeżonych statycznych IP z puli. Ile adresów IP w puli pozostało do przypisania innym hostom?
+	(a) 3
+	(b) 252
+	(c) 251
+	(d) 254
+	(e) 253

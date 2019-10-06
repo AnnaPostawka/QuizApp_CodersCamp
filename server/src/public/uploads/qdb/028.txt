@@ -1,0 +1,6 @@
+QQ0100;img=28.jpg
+28.	Rysunek przedstawia częściowy wydruk konfiguracji przełącznika. Jakiego hasła należy użyć w trakcie logowania się przez telnet aby wejść w tryb użytkownika (user exec mode)?
+	(b) lineconin
+	(c) linevtyin
+	(d) letmein
+	(a) secretin

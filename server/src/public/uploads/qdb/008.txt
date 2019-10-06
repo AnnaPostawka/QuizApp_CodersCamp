@@ -1,0 +1,7 @@
+QQ00011
+8.	Które dwa określenia poprawnie opisują typy pamięci routera i jej zawartości?
+	(a) Pamięć ROM jest nieulotna i przechowuje działający system operacyjny - IOS.
+	(b) Pamięć FLASH jest nieulotna i przechowuje fragment systemy IOS.
+	(c) Pamięć NVRAM jest nieulotna i przechowuje cały system operacyjny IOS.
+	(d) Pamięć ROM jest nieulotna i zawiera podstawowe oprogramowanie diagnostyczne.
+	(e) Pamięć RAM jest ulotna i przechowuje bieżącą tablicę routingu IP.

@@ -1,0 +1,6 @@
+QQ0100
+83.	Co zrobi przełącznik warstwy 2, gdy docelowy adres MAC odebranej ramki nie znajduje się w jego tabeli MAC adresów?
+	(a) Zainicjuje zapytanie ARP
+	(b) Wyśle ramkę do wszystkich portów za wyjątkiem portu, z którego ramka została odebrana
+	(c) Wyśle ramkę przez wszystkie porty na przełączniku
+	(d) Powiadamia hosta wysyłającego, że ramka nie może zostać dostarczona

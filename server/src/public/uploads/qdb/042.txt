@@ -1,0 +1,7 @@
+QQ10000
+42.	Który z podanych adresów jest adresem Loopback?
+	(a) 127.0.255.255
+	(b) 192.168.0.0
+	(c) 128.0.0.1
+	(d) 0.0.0.0
+	(e) 0.0.0.1

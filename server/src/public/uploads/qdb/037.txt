@@ -1,0 +1,7 @@
+QQ00001
+37.	Adres IP ma zarezerwowane 5 bitów dla części hosta. Jak powinna wyglądać maska w formacie dziesiętnym?
+	(a) 255.255.224.0
+	(b) 255.255.225.5
+	(c) 255.255.225.240
+	(d) 255.255.225.248
+	(e) 255.255.225.224

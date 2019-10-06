@@ -1,0 +1,6 @@
+QQ0001
+4.	At a minimum, which address is required on IPv6-enabled interfaces?
+	(a) global unicast
+	(b) unique local
+	(c) site local
+	(d) link-local

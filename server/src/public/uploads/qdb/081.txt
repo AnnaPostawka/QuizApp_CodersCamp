@@ -1,0 +1,7 @@
+QQ01000
+81.	Gdzie zgodnie z najlepszymi praktykami powinno się umieszczać access listy (E - extended, S - standard)? Wybierz jedną odpowiedź:
+	(a) E - najbliżej celu, S - najbliżej źródła
+	(b) E - najbliżej źródła, S - najbliżej celu
+	(c) Wszystko zależy od tego, czy konfigurujemy sieć lokalną, czy globalną
+	(d) E - najbliżej celu, S - najbliżej celu
+	(e) E - najbliżej źródła, S - najbliżej źródła

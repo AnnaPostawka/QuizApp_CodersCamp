@@ -1,0 +1,7 @@
+QQ10000;img=63.jpg
+63.	W celu umożliwienia routingu pomiędzy sieciami VLAN administrator dodał ruter, którego interfejs został skonfigurowany do współpracy z łączeniem trunk. Czemu odpowiada parametr ukryty pod znakiem zapytania na poniższym rysunku?
+	(a) Jest to identyfikator sieci VLAN przypisanej do tego podinterfejsu
+	(b) Określa maksymalną liczbę hostów, które mogą pracować na tym interfejsie
+	(c) Jest to identyfikator sieci natywnej VLAN
+	(d) Precyzuje typ enkapsulacji.
+	(e) Jest to identyfikator podinterfejsu

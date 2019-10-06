@@ -1,0 +1,7 @@
+QQ10000
+38.	Jakiego typu jest adres IP 172.17.4.127/24?
+	(a) Adres hosta
+	(b) Adres multikastowy
+	(c) Adres broadcast
+	(d) Adres sieci
+	(e) Adres fizyczny

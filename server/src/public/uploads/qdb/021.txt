@@ -1,0 +1,6 @@
+QQ0010;img=21.jpg
+21.	Host A wysyła pakiet do hosta B. Jaki będzie adres MAC oraz adres IP zawarty w pakiecie w momencie, gdy dotrze on do celu?
+	(a) MAC: 00F4.EE86.1134 IP: 10.5.5.1
+	(b) MAC: 00F4.EE11.11A0 IP: 172.16.10.10
+	(c) MAC: 00F4.EE86.1134 IP: 172.16.10.10
+	(d) MAC: 00F4.EE11.11A0 IP: 10.5.5.1

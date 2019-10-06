@@ -1,0 +1,7 @@
+QQ10000
+29.	Która maska podsieci będzie używana, jeśli część hosta adresu IP składa się z 4 bitów?
+	(a) 255.255.255.240
+	(b) 255.255.255.224
+	(c) 255.255.255.5
+	(d) 255.255.254.224
+	(e) 255.255.255.192

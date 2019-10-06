@@ -1,0 +1,9 @@
+QQ1000011
+69.	Zaznacz trzy usługi, które są świadczone pomiędzy warstwę transportową Wybierz wszystkie poprawne odpowiedzi.
+	(a) Korekcja błędów
+	(b) Transmisja błędów
+	(c) Kodowanie danych
+	(d) Określenie trasy w sieci
+	(e) Formatowanie danych
+	(f) Kontrola przepływu
+	(g) Ustanowanie połączenia

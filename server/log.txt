@@ -1,0 +1,5 @@
+
+> server@1.0.0 start C:\Users\IDEAPAD\Desktop\supreme-potato\server
+> node ./src/app.js
+
+server started

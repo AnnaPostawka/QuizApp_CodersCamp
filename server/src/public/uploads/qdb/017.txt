@@ -1,0 +1,7 @@
+QQ00100
+17.	Jaka minimalna ilość bitow w adresie IP należy wypożyczyć z części hosta, aby moc zaadresować pięć podłączonych do routera sieci?
+	(b) 1
+	(c) 2
+	(d) 3
+	(e) 4
+	(a) 5

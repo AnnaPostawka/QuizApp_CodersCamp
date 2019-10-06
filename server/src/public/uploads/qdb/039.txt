@@ -1,0 +1,7 @@
+QQ00001
+39.	Ile adresów hostów jest dostępnych w sieci 172.16.128.0 z maską podsieci 255.255.252.0?
+	(a) 510
+	(b) 2046
+	(c) 512
+	(d) 1024
+	(e) 1022

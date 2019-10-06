@@ -1,0 +1,7 @@
+QQ00010
+24.	Z ilu bitów składa się adres IPv4?
+	(a) 256
+	(b) 128
+	(c) 48
+	(d) 32
+	(e) 64

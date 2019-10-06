@@ -1,0 +1,6 @@
+QQ0100
+11.	Jakim skrótem klawiszy przerwiemy działający proces systemu IOS? Skrót ten służy do zawieszania sesji i poprawnego wejścia do interfejsu CLI.
+	(a) Ctrl-Shift-X
+	(b) Ctrl-Shift-6
+	(c) Ctrl-Z
+	(d) Ctrl-C

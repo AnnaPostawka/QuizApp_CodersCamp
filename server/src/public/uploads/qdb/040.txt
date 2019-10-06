@@ -1,0 +1,6 @@
+QQ0100
+40.	Jeśli dane wysyłane są przez sieć bezprzewodową, następnie przez sieć Ethernet i ostatecznie przez łączę DSL, który nagłówek jest podmieniant przy zmianie medium transmisyjnego?
+	(a) Nagłówek warstwy fizycznej
+	(b) Nagłówek warstwy łącza danych
+	(c) Nagłówek warstwy 4
+	(d) Nagłówek warstwy 3

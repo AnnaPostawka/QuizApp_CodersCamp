@@ -1,0 +1,9 @@
+QQ0101000
+51.	Z jakich dwóch części składa się adres IPv4? Wybierz dwie odpowiedzi.
+	(a) Część podsieci
+	(b) Część sieci
+	(c) Część multicast
+	(d) Część hosta
+	(e) Część broadcast
+	(f) Część logiczna
+	(g) Część fizyczna

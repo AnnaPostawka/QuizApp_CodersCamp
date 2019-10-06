@@ -1,0 +1,7 @@
+QQ00001
+56.	Jeśli urządzenie sieciowe ma maskę /28, ile adresów IP jest dostępnych dla hostów w tej podsieci? Wybierz jedną odpowiedź
+	(a) 254
+	(b) 30
+	(c) 62
+	(d) 3
+	(e) 14

@@ -1,0 +1,7 @@
+QQ01000
+76.	Do sieci przedsiębiorstwa ma zostać dołączony używany przełącznik. Sieć wymaga wsparcia dla wielu sieci VLAN. W jaki sposób technik powinien przygotować przełącznik do konfiguracji w nowych warunkach? Wybierz jedną odpowiedź:
+	(a) Usunąć adres IP z interfejsów VLAN i wymusić ich wyłączenie.
+	(b) Skasować pamięć nvram i usunąć plik vlan.dat z pamięci flash oraz zresetować przełącznik
+	(c) Skasować konfigurację running-config i zresetować przełącznik
+	(d) Skasować pamięć RAM i usunąć plik config.txt z pamięci flash
+	(e) Powinien skasować konfigurację startup-config i zresetować przełącznik

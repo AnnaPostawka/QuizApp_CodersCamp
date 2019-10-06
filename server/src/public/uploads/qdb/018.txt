@@ -1,0 +1,6 @@
+QQ1000
+18.	Podaj dziesiętny odpowiednik liczby binarnej 10101010
+	(a) 170
+	(b) 234
+	(c) 85
+	(d) 81

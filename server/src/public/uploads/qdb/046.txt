@@ -1,0 +1,7 @@
+QQ01100
+46.	Jakie trasy w tablicy routingu mają odległość administracyjną mniejszą lub równą jeden. Wybierz dwie odpowiedzi.
+	(a) Trasa dynamiczna OSPF
+	(b) Trasa bezpośrednia prowadząca do sieci konfigurowanych na interfejsach urządzenia.
+	(c) Trasa statyczna.
+	(d) Trasa dynamiczna RIP
+	(e) Trasa dynamiczna RIPv2

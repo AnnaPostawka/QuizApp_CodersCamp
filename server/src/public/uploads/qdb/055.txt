@@ -1,0 +1,7 @@
+QQ01000
+55.	Administrator sieci chce mieć taką samą maskę sieciową dla wszystkich podsieci.Sieć przedsiębiorstwa składa się z następujących podsieci i urządzeń:Telefony IP - 22 adresyKomputery - 20 adresów potrzebnychDrukarki - potrzebne 2 adresySkanery - potrzebne 2 adresyAdministrator dysponuje adresem 192.168.10.0/24. Jaką maskę podsieci powinienwybrać administrator, aby podział na podsieci był najbardziej efektywny podwzględem wykorzystania dostępnych adresów?
+	(a) 255.255.255.192
+	(b) 255.255.255.224
+	(c) 255.255.255.248
+	(d) 255.255.255.128
+	(e) 255.255.255.240

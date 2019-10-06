@@ -1,0 +1,6 @@
+QQ0010
+30.	Który opis najlepiej charakteryzuje protokół CSMA/CD?
+	(a) Kodowanie wiadomości.
+	(b) Kontrola przepływu.
+	(c) Metoda dostępu.
+	(d) Enkapsulacja wiadomości.

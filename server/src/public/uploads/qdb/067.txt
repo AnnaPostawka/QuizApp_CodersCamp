@@ -1,0 +1,6 @@
+QQ0100;img=67.jpg
+67.	Nawiązując do rysunku: Jaka jest wartość dystansu administracyjnego w tablicy routingu R2 do sieci 10.10.0.0/16?
+	(a) 0
+	(b) 1
+	(c) 20512256
+	(d) 90

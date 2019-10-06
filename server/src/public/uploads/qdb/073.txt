@@ -1,0 +1,6 @@
+QQ0011
+73.	Które dwie warstwy modelu ISO-OSI zawierają się w najniższej warstwie stosu protokołów TCP/IP?
+	(a) Warstwa dostępu do sieci
+	(b) Warstwa aplikacji
+	(c) Warstwa fizyczna
+	(d) Warstwa łącza danych

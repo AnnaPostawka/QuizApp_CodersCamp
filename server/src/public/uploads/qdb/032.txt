@@ -1,0 +1,6 @@
+QQ0100
+32.	Technik z komputerem PC korzysta z wielu aplikacji po podłączeniu do Internetu. W jaki sposób komputer jest w stanie poprawnie śledzić przepływ danych między wieloma sesjami różnych aplikacji?
+	(a) Przepływ danych jest śledzony na podstawie docelowego adresu IP używanego przez komputer technika.
+	(b) Przepływ danych jest śledzony na podstawie numeru portu źródłowego wykorzystywanego przez każdą aplikację.
+	(c) Przepływ danych jest śledzony na podstawie źródłowego adresu IP używanego przez komputer technika.
+	(d) Przepływ danych jest śledzony na podstawie numeru portu docelowego wykorzystywanego przez każdą aplikację

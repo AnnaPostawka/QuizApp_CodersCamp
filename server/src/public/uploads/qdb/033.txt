@@ -1,0 +1,7 @@
+QQ00101
+33.	Które protokoły funkcjonują w warstwie Internetu? Wybierz dwa.
+	(a) PPP
+	(b) BOOTP
+	(c) ICMP
+	(d) FTP
+	(e) IP

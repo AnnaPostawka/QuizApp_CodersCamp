@@ -1,0 +1,7 @@
+QQ00100;img=58.jpg
+58.	Nawiązując do rysunku. Firma korzysta z bloku adresu 128.107.0.0/16 dla swojej sieci. Jaka maska podsieci zapewni maksymalną liczbę podsieci o jednakowej wielkości, zapewniając jednocześnie wystarczające adresy hostów dla każdej podsieci zaznaczonej na rysunku. Wybierz jedną odpowiedż.
+	(a) 255.255.255.192
+	(b) 255.255.255.240
+	(c) 255.255.255.128
+	(d) 255.255.255.0
+	(e) 255.255.255.224

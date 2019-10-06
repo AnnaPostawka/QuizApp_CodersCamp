@@ -1,0 +1,6 @@
+QQ0100
+1.	Jaki jest cel komunikatów ICMP
+	(a) Zapewniają poprawne dostarczanie pakietu IP do odbiorcy
+	(b) Dostarczają informacji zwrotnych o transmisjach pakietów IP
+	(c) Monitorują proces zamiany adresów domenowych na adresy IP
+	(d) Informują routery o zmianach topologii sieci

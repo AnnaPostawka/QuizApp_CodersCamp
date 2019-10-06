@@ -1,0 +1,6 @@
+QQ0100
+43.	Internetowa transmisja telewizyjna korzysta z protokołu UDP. Co się dzieje, gdy część pakietów UDP jest traconych w trakcie transmisji?
+	(a) Informacja o brakujących segmentach jest wysyłana do hosta źródłowego
+	(b) Transmisja trwa nadal, brakująca część danych jest pomijana
+	(c) Cała transmisja telewizyjna jest wznowiona od początku
+	(d) Retransmitowane są jedynie brakujące segmenty

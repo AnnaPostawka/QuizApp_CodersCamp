@@ -1,0 +1,5 @@
+QQ001
+74.	W jakiej sytuacji powinno się na przełączniku skonfigurować adres IP?
+	(a) Jeżeli przełącznik warstwy 2 jest bramą domyślną
+	(b) Jeżeli przełącznik warstwy 2 ma przesyłać ruch pomiędzy urządzeniami warstwy 3.
+	(c) Jeżeli przełącznik warstwy 2 wymaga zdalnej administracji.

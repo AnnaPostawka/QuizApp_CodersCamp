@@ -1,0 +1,6 @@
+QQ0001
+20.	What is the valid most compressed format possible of the IPv6 address 2001:0DB8:0000:AB00:0000:0000:0000:1234?
+	(a) 2001:DB8:0:AB::1234
+	(b) 2001:DB8:0:AB:0:1234
+	(c) 2001:DB8::AB00::1234
+	(d) 2001:DB8:0:AB00::1234

@@ -1,0 +1,9 @@
+QQ1010100
+87.	Jakie trzy bloki adresów są zdefiniowane przez RFC 1918 do użytku prywatnego w sieci Internet?
+	(a) 10.0.0.0/8
+	(b) 239.0.0.0/8
+	(c) 172.16.0.0/12
+	(d) 127.0.0.0/8
+	(e) 192.168.0.0/16
+	(f) 192.16.0.0/24
+	(g) 169.254.0.0/16

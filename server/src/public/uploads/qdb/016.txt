@@ -1,0 +1,8 @@
+QQ100000
+16.	Jaka jest liczba użytecznych adresów IP hostów w sieci określonej maską /25
+	(a) 126
+	(b) 62
+	(c) 128
+	(d) 254
+	(e) 32
+	(f) 16-2

@@ -1,0 +1,7 @@
+QQ00010
+23.	Jaki protokół należy skonfigurować na porcie 0/1 przełącznika SW-A, aby umożliwić mu przesyłanie ruchu z wszystkich swoich VLANów do przełącznika SW-B?
+	(a) Spanning Tree
+	(b) IEEE 802.1Q
+	(c) ARP
+	(d) VTP
+	(e) Rapid Spanning Tree

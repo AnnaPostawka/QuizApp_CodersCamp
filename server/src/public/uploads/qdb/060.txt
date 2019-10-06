@@ -1,0 +1,8 @@
+QQ100011
+60.	Jakie są zalety routingu statycznego w porównaniu do dynamicznego? Wybierz wszystkie poprawne odpowiedzi.
+	(a) Jest prostszy w konfiguracji.
+	(b) Automatycznie zmienia drogę do sieci docelowej, kiedy topologia sieci ulegnie zmianie.
+	(c) Wymaga mniej czasu na aktualizacje tablicy routingu w przypadku zmian topologii sieci.
+	(d) Zwiększa efektywność wyszukiwania sąsiednich sieci.
+	(e) Zużywa mniej zasobów routera.
+	(f) bardziej bezpieczny, ponieważ nie reklamuje w sieci

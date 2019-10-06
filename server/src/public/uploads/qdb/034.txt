@@ -1,0 +1,6 @@
+QQ0010
+34.	Podaj dziesiętny odpowiednik liczby szesnastkowej: 0x4F
+	(a) 95
+	(b) 69
+	(c) 79
+	(d) 78

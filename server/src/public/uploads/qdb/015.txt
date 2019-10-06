@@ -1,0 +1,7 @@
+QQ10000
+15.	Które stwierdzenie poprawnie charakteryzuje narzędzie traceroute (tracert)?
+	(a) Identyfikuje routery w ścieżce od hosta źródłowego do hosta docelowego
+	(b) Wysyła cztery wiadomości ICMP zadania echa (echo request)
+	(c) Jest używany przede wszystkim do testowania połączeń między dwoma
+	(d) hostami
+	(e) Wykorzystuje wiadomości ICMP Source Quench

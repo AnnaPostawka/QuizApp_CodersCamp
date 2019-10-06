@@ -1,0 +1,7 @@
+QQ00010
+62.	Jaką funkcję spełnia pamięć NVRAM
+	(a) Przechowuje BIOS urządzenia
+	(b) Przechowuje tab licę routingu
+	(c) Przechowuje system operacyjny
+	(d) Przechowuje konfigurację startową
+	(e) Przechowuje tablicę ARP

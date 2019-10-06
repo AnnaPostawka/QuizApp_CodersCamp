@@ -1,0 +1,6 @@
+QQ0100
+80.	Jaka jest podstawowa cecha protokołu IP?
+	(a) Dzieli na segmenty dane użytkownika.
+	(b) Bezpołączeniowy.
+	(c) Niezawodnie dostarcza sane od nadawcy do odbiorcy.
+	(d) Zależy od medium.
