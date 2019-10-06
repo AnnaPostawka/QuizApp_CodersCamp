@@ -7,6 +7,8 @@ import { routerContext } from "./routerContext";
 import { history } from "./history";
 import { alertReducer } from "./alert";
 import quizConfig from "./quizConfig";
+import token from "./token";
+import isLogged from "./isLogged";
 
 export default combineReducers({
 	questionsList,
@@ -16,5 +18,7 @@ export default combineReducers({
 	routerContext,
 	history,
 	alertReducer,
-	quizConfig
+	quizConfig,
+	token,
+	isLogged
 });

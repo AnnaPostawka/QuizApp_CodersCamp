@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-export default function forceRedirect(path, key, value, deep) {
+export default function forceRedirect(path, key, value, deep = false) {
 	const config = { path, key, value, deep };
 	return forceRedirectHOC.bind(null, config);
 }

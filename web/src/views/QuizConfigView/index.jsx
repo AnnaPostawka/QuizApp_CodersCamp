@@ -10,6 +10,8 @@ import QuizOptionNumberPicker from "./quizOptionNumberPicker";
 import QuizConfigWrapper from "./quizConfigWrapper";
 import NavigationButton from "../../components/NavigationButton";
 import { RECORD_QUIZ_CONFIG } from "../../redux/actions/recordQuizConfig";
+import { logout } from "../../redux/actions/logout";
+import forceRedirect from "../../hoc/forceRedirect.js";
 
 class QuizConfigView extends Component {
 	constructor(props) {
@@ -154,11 +156,14 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		recordQuizConfig: config => dispatch({ type: RECORD_QUIZ_CONFIG, payload: config })
+		recordQuizConfig: config => dispatch({ type: RECORD_QUIZ_CONFIG, payload: config }),
+		logout: () => dispatch(logout())
 	};
 };
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(QuizConfigView);
+export default forceRedirect("/", "isLogged", false)(
+	connect(
+		mapStateToProps,
+		mapDispatchToProps
+	)(QuizConfigView)
+);
