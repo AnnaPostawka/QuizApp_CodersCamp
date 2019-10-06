@@ -1,0 +1,40 @@
+.topBar {
+	padding: 62px 0 0 26px;
+}
+.topBar__item {
+	margin: 0;
+	font-size: 36px;
+}
+.topBar__title {
+	color: white;
+	font-weight: bold;
+}
+.topBar__description {
+	margin-left: 11px;
+	color: rgba(231, 209, 209, 0.71);
+}
+.topBar__text {
+	display: none;
+}
+@media (min-width: 1440px) {
+	.topBar {
+		flex-basis: 686px;
+		min-height: 100vh;
+		background-image: url("/img/bg.png");
+		box-shadow: inset 0 0 0 1000px rgba(165, 42, 42, 0.205);
+	}
+	.topBar__title {
+		font-size: 64px;
+		margin-left: 60px;
+	}
+	.topBar__description {
+		margin-left: 97px;
+	}
+	.topBar__text {
+		margin-top: 150px;
+		display: block;
+		font-size: 24px;
+		color: white;
+		padding: 0 21px 0 98px;
+	}
+}

@@ -1,25 +1,9 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import AlertContainer from "../../components/userCommunication/AlertContainer";
-import { Button } from "antd";
-import { addAlert } from "../../redux/actions/alert";
+import Wrapper from "../../components/LoginRegisterComponents/Wrapper";
 
 class LoginView extends Component {
-	onButtonClickHandler(e) {
-		this.props.alertsAddAlerts();
-	}
-
 	render() {
-		return (
-			<div>
-				<Button onClick={this.onButtonClickHandler.bind(this)}>Add alert</Button>
-				<AlertContainer />
-			</div>
-		);
+		return <Wrapper view="Login" />;
 	}
 }
-
-export default connect(
-	null,
-	{ alertsAddAlerts: addAlert }
-)(LoginView);
+export default LoginView;

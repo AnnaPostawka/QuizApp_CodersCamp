@@ -1,0 +1,33 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url("/img/bg.png");
+	background-size: cover;
+	background-position: 50% 50%;
+	min-height: 100vh;
+	box-shadow: inset 0 0 0 1000px rgba(165, 42, 42, 0.205);
+	font-family: "Roboto", sans-serif;
+}
+.wrapper__container {
+	margin: 0 auto;
+}
+@media (min-width: 800px) and (orientation: landscape) {
+	.wrapper {
+		align-items: center;
+	}
+}
+@media (min-width: 1440px) {
+	.wrapper {
+		flex-direction: row;
+		justify-content: stretch;
+		background-image: none;
+		box-shadow: none;
+	}
+	.wrapper__container {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+}
