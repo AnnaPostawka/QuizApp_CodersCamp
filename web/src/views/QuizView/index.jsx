@@ -6,6 +6,7 @@ import Question from "../../components/Question";
 import { Spin, Skeleton, PageHeader, Divider } from "antd";
 import Timer from "react-compound-timer";
 import styles from "./QuizView.module.css";
+import forceRedirect from "../../hoc/forceRedirect";
 
 class QuizView extends React.Component {
 	constructor(props) {
@@ -79,10 +80,12 @@ const mapStateToProps = state => {
 	};
 };
 
-export default connect(
-	mapStateToProps,
-	{
-		fetchQuiz,
-		cleanQuestions
-	}
-)(QuizView);
+export default forceRedirect("/config", "quizConfig.questionsNumber", undefined, true)(
+	connect(
+		mapStateToProps,
+		{
+			fetchQuiz,
+			cleanQuestions
+		}
+	)(QuizView)
+);
