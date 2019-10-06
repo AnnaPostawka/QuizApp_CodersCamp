@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchQuiz } from "../../redux/actions/fetchQuiz";
+import { cleanQuestions } from "../../redux/actions/cleanQuestions.js";
 import Question from "../../components/Question";
 import { Spin, Skeleton, PageHeader, Divider } from "antd";
 import Timer from "react-compound-timer";
@@ -52,6 +53,10 @@ class QuizView extends React.Component {
 		);
 	}
 
+	componentWillUnmount() {
+		this.props.cleanQuestions();
+	}
+
 	render() {
 		return (
 			<div className={styles.layout}>
@@ -77,6 +82,7 @@ const mapStateToProps = state => {
 export default connect(
 	mapStateToProps,
 	{
-		fetchQuiz
+		fetchQuiz,
+		cleanQuestions
 	}
 )(QuizView);
