@@ -7,11 +7,13 @@ import { Spin, Skeleton, PageHeader, Divider } from "antd";
 import Timer from "react-compound-timer";
 import styles from "./QuizView.module.css";
 import forceRedirect from "../../hoc/forceRedirect";
+import { Prompt } from "react-router-dom";
 
 class QuizView extends React.Component {
 	constructor(props) {
 		super(props);
 		this.props.fetchQuiz(this.props.quizConfigUrl);
+		this.state = { backClicked: false };
 	}
 
 	generateContentOrLoader() {
@@ -61,7 +63,16 @@ class QuizView extends React.Component {
 	render() {
 		return (
 			<div className={styles.layout}>
-				<PageHeader title="Back" className={styles.back} onBack />
+				<PageHeader
+					title="Back"
+					className={styles.back}
+					onBack={() => {
+						this.setState({ backClicked: true });
+						console.log(this.props);
+						this.props.history.goBack();
+					}}
+				/>
+				<Prompt when={this.state.backClicked} message="Are you sure? Your quiz will be lost." />
 				<div id="content" className={styles.content}>
 					{this.generateContentOrLoader()}
 				</div>
@@ -76,7 +87,8 @@ const mapStateToProps = state => {
 		quizConfigUrl: state.quizConfig.configUrl,
 		questionsList: state.questionsList,
 		question: state.question,
-		points: state.points
+		points: state.points,
+		history: state.history
 	};
 };
 
