@@ -1,7 +1,8 @@
 .button {
-    padding: 10px !important;
-    height: unset !important;
+	padding: 10px !important;
+	height: unset !important;
 }
 
 .button::after {
-    display: none !important;
+	display: none !important;
+}

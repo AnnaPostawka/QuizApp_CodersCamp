@@ -23,25 +23,25 @@
 }
 
 .content-title {
-    text-align: center;
+	text-align: center;
 }
 
-.option-wrapper+.option-wrapper {
-    margin: 1em 0 0 0;
+.option-wrapper + .option-wrapper {
+	margin: 1em 0 0 0;
 }
 
-.option-title{
-    margin-left: -1em;
+.option-title {
+	margin-left: -1em;
 }
 
 .option-wrapper .ant-select,
-.option-wrapper .ant-input-number{
-    width: 100%;
+.option-wrapper .ant-input-number {
+	width: 100%;
 }
 
-.option-wrapper .ant-btn{
-    padding: 10px;
-    height: unset;
+.option-wrapper .ant-btn {
+	padding: 10px;
+	height: unset;
 }
 
 .back {
