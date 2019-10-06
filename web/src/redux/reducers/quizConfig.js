@@ -1,5 +1,5 @@
 import { RECORD_QUIZ_CONFIG } from "../actions/recordQuizConfig";
-import { CLEAN_QUESTIONS } from "../actions/cleanQuestions"
+import { CLEAN_QUESTIONS } from "../actions/cleanQuestions";
 
 const defaultState = {
 	questionsNumber: 10
@@ -32,4 +32,4 @@ export default function quizConfig(state = {}, action) {
 		default:
 			return state;
 	}
-};
+}
