@@ -8,11 +8,13 @@ import Timer from "react-compound-timer";
 import styles from "./QuizView.module.css";
 import forceRedirect from "../../hoc/forceRedirect";
 import NavigationButton from "../../components/NavigationButton";
+import { Prompt } from "react-router-dom";
 
 class QuizView extends React.Component {
 	constructor(props) {
 		super(props);
 		this.props.fetchQuiz(this.props.quizConfigUrl);
+		this.state = { backClicked: false };
 	}
 
 	generateContentOrLoader() {
@@ -83,7 +85,8 @@ const mapStateToProps = state => {
 		quizConfigUrl: state.quizConfig.configUrl,
 		questionsList: state.questionsList,
 		question: state.question,
-		points: state.points
+		points: state.points,
+		history: state.history
 	};
 };
 
