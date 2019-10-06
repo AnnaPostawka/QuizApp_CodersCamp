@@ -1,10 +1,11 @@
 import React from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
 import "antd/dist/antd.css";
 
 // import "../global.module.css";
 import LoginView from "../views/LoginView";
 import RegisterView from "../views/RegisterView";
+import { Switch, Route } from "react-router-dom";
+import HashRouter from "./ReduxedHashRouter";
 
 export default function App() {
 	return (

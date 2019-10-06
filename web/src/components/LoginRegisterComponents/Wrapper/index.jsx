@@ -12,7 +12,8 @@ const Views = {
 		btnText: "Sign In",
 		footerText: "Don't have an account yet?",
 		linkText: "Sign Up",
-		linkPath: "/register"
+		linkPath: "/register",
+		isRegister: false
 	},
 	Register: {
 		title: "Testownik",

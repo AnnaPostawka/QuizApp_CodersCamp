@@ -3,6 +3,9 @@ import styles from "./FormView.module.css";
 import validation from "./form-validation";
 import FormItem from "../FormItem";
 import Button from "../Button";
+import { connect } from "react-redux";
+import { login } from "../../../redux/actions/login";
+import { register } from "../../../redux/actions/register";
 
 class Form extends Component {
 	constructor(props) {
@@ -31,22 +34,16 @@ class Form extends Component {
 			[name]: value
 		});
 	};
-
 	handleSubmit = e => {
 		e.preventDefault();
-		const checkValidation = validation(this.state);
-		if (checkValidation.correctForm) {
-			this.setState({
-				username: "",
-				email: "",
-				password: "",
-				errors: {
-					username: false,
-					email: false,
-					password: false
-				}
-			});
+		const { username, email, password } = this.state;
+		if (!isRegister) {
+			this.props.login(username, password);
 		} else {
+			this.props.login(username, email, password);
+		}
+		const checkValidation = validation(this.state);
+		if (!checkValidation.correctForm) {
 			this.setState({
 				errors: {
 					username: checkValidation.username,
@@ -108,4 +105,7 @@ class Form extends Component {
 		);
 	}
 }
-export default Form;
+export default connect(
+	null,
+	{ login, register }
+)(Form);
