@@ -79,7 +79,7 @@ class QuizConfigView extends Component {
 	 * TODO: implement logout in place of simple redirect to login screen
 	 */
 	onBackButtonClick() {
-		this.props.hashHistory.push("/");
+		this.props.logout();
 	}
 
 	onConfigOptionChange(key, value) {
