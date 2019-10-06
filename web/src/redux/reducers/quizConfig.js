@@ -1,4 +1,5 @@
 import { RECORD_QUIZ_CONFIG } from "../actions/recordQuizConfig";
+import { CLEAN_QUESTIONS } from "../actions/cleanQuestions";
 
 const defaultState = {
 	questionsNumber: 10
@@ -22,11 +23,13 @@ const buildApiUrlFromConfig = (config = defaultState) => {
 	return url;
 };
 
-export default (state = {}, action) => {
+export default function quizConfig(state = {}, action) {
 	switch (action.type) {
 		case RECORD_QUIZ_CONFIG:
 			return { ...action.payload, configUrl: buildApiUrlFromConfig(action.payload) };
+		case CLEAN_QUESTIONS:
+			return {};
 		default:
 			return state;
 	}
-};
+}
