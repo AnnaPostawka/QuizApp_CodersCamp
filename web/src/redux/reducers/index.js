@@ -6,5 +6,6 @@ import points from "./points";
 import { test } from "./test";
 import { routerContext } from "./routerContext";
 import { history } from "./history";
+import { alertReducer } from "./alert";
 
-export default combineReducers({ questionsList, question, answer, points, test, routerContext, history });
+export default combineReducers({ questionsList, question, answer, points, test, routerContext, history, alertReducer });
