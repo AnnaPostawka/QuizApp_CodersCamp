@@ -1,0 +1,24 @@
+.question__answer {
+	composes: button from "../../styles/Button.module.css";
+	text-align: left !important;
+}
+
+.question__answer--correct {
+	composes: question__answer;
+	background: #00b407 !important;
+	color: white !important;
+}
+
+.question__answer--correct:hover {
+	border: 1px solid #00a306 !important;
+}
+
+.question__answer--wrong {
+	composes: question__answer;
+	background: #f44336 !important;
+	color: white !important;
+}
+
+.question__answer--wrong:hover {
+	border: 1px solid #d2392e !important;
+}

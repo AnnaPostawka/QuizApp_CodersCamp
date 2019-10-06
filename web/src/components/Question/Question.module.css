@@ -1,0 +1,12 @@
+.question {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: calc(100% - 50px);
+	width: 100%;
+	align-content: space-between;
+}
+
+.question__button {
+	composes: button from "../../styles/Button.module.css";
+}

@@ -1,0 +1,10 @@
+.question__answers {
+	width: 100%;
+	flex: 1;
+	padding: 2% 0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100%;
+}
