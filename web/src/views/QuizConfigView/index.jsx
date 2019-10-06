@@ -2,12 +2,13 @@
 import "./quizconfig.css";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Button, PageHeader } from "antd";
+import { Button } from "antd";
 import QuizOptionWrapper from "./quizOptionWrapper";
 import QuizOptionSelect from "./quizOptionSelect";
 import QuizOptionRadio from "./quizOptionRadio";
 import QuizOptionNumberPicker from "./quizOptionNumberPicker";
 import QuizConfigWrapper from "./quizConfigWrapper";
+import NavigationButton from "../../components/NavigationButton";
 import { RECORD_QUIZ_CONFIG } from "../../redux/actions/recordQuizConfig";
 import { logout } from "../../redux/actions/logout";
 import forceRedirect from "../../hoc/forceRedirect.js";
@@ -65,7 +66,6 @@ class QuizConfigView extends Component {
 	}
 
 	onConfirmButtonClick() {
-		console.log(this.props);
 		this.props.recordQuizConfig({
 			questionsNumber: this.state.questionsNumber,
 			category: this.state.category,
@@ -73,6 +73,13 @@ class QuizConfigView extends Component {
 			type: this.state.type
 		});
 		this.props.hashHistory.push("/quiz");
+	}
+
+	/**
+	 * TODO: implement logout in place of simple redirect to login screen
+	 */
+	onBackButtonClick() {
+		this.props.hashHistory.push("/");
 	}
 
 	onConfigOptionChange(key, value) {
@@ -85,7 +92,9 @@ class QuizConfigView extends Component {
 	render() {
 		return (
 			<div className="layout">
-				<PageHeader title="Log Out" className="back" onBack={this.props.logout} />
+				<NavigationButton direction="back" onClick={this.onBackButtonClick.bind(this)}>
+					Log Out
+				</NavigationButton>
 				<QuizConfigWrapper title="Quiz Configuration">
 					<QuizOptionWrapper title="Number of questions">
 						<QuizOptionNumberPicker
