@@ -1,11 +1,12 @@
+import "antd/dist/antd.css";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import HashRouter from "./ReduxedHashRouter";
 import LoginView from "../views/LoginView";
 import QuizView from "../views/QuizView";
-import "antd/dist/antd.css";
 
 export default function App() {
+	// useAntDesignOverwrite();
 	return (
 		<HashRouter>
 			<Switch>
