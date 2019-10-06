@@ -58,6 +58,7 @@ class QuizView extends React.Component {
 	}
 
 	onBackButtonClick() {
+		this.setState({ backClicked: true });
 		this.props.history.goBack();
 	}
 
@@ -71,6 +72,7 @@ class QuizView extends React.Component {
 				<NavigationButton direction="back" onClick={this.onBackButtonClick.bind(this)}>
 					Back
 				</NavigationButton>
+				<Prompt when={this.state.backClicked} message="Are you sure? Your quiz will be lost!" />
 				<div id="content" className={styles.content}>
 					{this.generateContentOrLoader()}
 				</div>
