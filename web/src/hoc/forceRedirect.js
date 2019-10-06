@@ -36,7 +36,6 @@ function useRedirect(config) {
 	if (config.deep) {
 		const levels = config.key.split(".");
 		mapState = state => {
-			debugger;
 			return levels.reduce((parent, child) => parent[child], state);
 		};
 	} else {
