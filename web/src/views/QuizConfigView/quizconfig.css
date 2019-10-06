@@ -1,0 +1,57 @@
+/*LAYOUT*/
+.layout {
+	background: url("./quiz_bg.jpg") no-repeat center;
+	background-size: cover;
+	padding: 4%;
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: min-content;
+	grid-gap: 0px;
+}
+
+.content-wrapper {
+	padding: 3% 5%;
+	border-radius: 5px;
+	background: #fff3;
+	min-width: 280px;
+}
+
+.content-wrapper .divider {
+	background-color: #0003;
+}
+
+.content-title {
+    text-align: center;
+}
+
+.option-wrapper+.option-wrapper {
+    margin: 1em 0 0 0;
+}
+
+.option-title{
+    margin-left: -1em;
+}
+
+.option-wrapper .ant-select,
+.option-wrapper .ant-input-number{
+    width: 100%;
+}
+
+.option-wrapper .ant-btn{
+    padding: 10px;
+    height: unset;
+}
+
+.back {
+	padding: 0 0 4% 0;
+	height: min-content;
+}
+
+@media (max-width: 768px) {
+	.layout {
+		grid-template-columns: 1fr;
+		grid-template-rows: min-content;
+	}
+}
