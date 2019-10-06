@@ -1,5 +1,5 @@
 import React from "react";
-import "./Wrapper.css";
+import styles from "./Wrapper.module.css";
 import TopBar from "../TopBar";
 import Form from "../Form";
 import Footer from "../Footer";
@@ -38,9 +38,9 @@ const Wrapper = ({ view }) => {
 		isRegister
 	} = Views[view];
 	return (
-		<div className="wrapper">
+		<div className={styles.wrapper}>
 			<TopBar title={title} description={description} />
-			<div className="wrapper__container">
+			<div className={styles.wrapper__container}>
 				<Form btnText={btnText} formType={formType} isRegister={isRegister} />
 				<Footer text={footerText} linkText={linkText} linkPath={linkPath} />
 			</div>

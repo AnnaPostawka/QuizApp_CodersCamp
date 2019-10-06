@@ -9,11 +9,11 @@
 	box-shadow: inset 0 0 0 1000px rgba(165, 42, 42, 0.205);
 	font-family: "Roboto", sans-serif;
 }
-.wrapper__container{
-	margin:0 auto;
+.wrapper__container {
+	margin: 0 auto;
 }
-@media (min-width:800px) and (orientation: landscape){
-	.wrapper{
+@media (min-width: 800px) and (orientation: landscape) {
+	.wrapper {
 		align-items: center;
 	}
 }

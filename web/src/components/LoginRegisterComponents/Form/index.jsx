@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./FormView.css";
+import styles from "./FormView.module.css";
 import FormItem from "../FormItem";
 import Button from "../Button";
 
@@ -13,14 +13,14 @@ class Form extends Component {
 			errors: {
 				username: false,
 				password: false,
-				email: false,
+				email: false
 			}
 		};
 		this.validationMessages = {
 			emptyUsername: "Enter your login.",
 			noEmail: "Enter your email.",
-			noPassword: "Enter password.",
-		}
+			noPassword: "Enter password."
+		};
 	}
 	handleInputChange = e => {
 		const target = e.target;
@@ -38,7 +38,7 @@ class Form extends Component {
 		if (this.state.username.length !== 0) {
 			username = false;
 		}
-		if (this.state.email.length >= 5 && this.state.email.indexOf('@') !== -1) {
+		if (this.state.email.length >= 5 && this.state.email.indexOf("@") !== -1) {
 			email = false;
 		}
 		if (this.state.password.length >= 6) {
@@ -47,43 +47,42 @@ class Form extends Component {
 		if (username || email || password) {
 			correctForm = false;
 		}
-		return ({
+		return {
 			username,
 			email,
 			password,
 			correctForm
-		})
-	}
-	handleSubmit = (e) => {
+		};
+	};
+	handleSubmit = e => {
 		e.preventDefault();
 		const checkValidation = this.checkValidation();
 		if (checkValidation.correctForm) {
 			this.setState({
-				username: '',
-				email: '',
-				password: '',
+				username: "",
+				email: "",
+				password: "",
 				errors: {
 					username: false,
 					email: false,
-					password: false,
+					password: false
 				}
-			})
-		}
-		else {
+			});
+		} else {
 			this.setState({
 				errors: {
 					username: checkValidation.username,
 					email: checkValidation.email,
-					password: checkValidation.password,
+					password: checkValidation.password
 				}
-			})
+			});
 		}
-	}
+	};
 	render() {
 		return (
-			<div className="formView">
-				<h2 className="formView__title">{this.props.formType}</h2>
-				<form onSubmit={this.handleSubmit} className="formView__form form" noValidate>
+			<div className={styles.formView}>
+				<h2 className={styles.formView__title}>{this.props.formType}</h2>
+				<form onSubmit={this.handleSubmit} className={[styles.formView__form, styles.form].join(' ')} noValidate>
 					<FormItem
 						text="Username"
 						id="username"
@@ -92,7 +91,9 @@ class Form extends Component {
 						value={this.state.username}
 						handleInputChange={this.handleInputChange}
 					/>
-					{this.state.errors.username && <span className="form__validateInfo">{this.validationMessages.emptyUsername}</span>}
+					{this.state.errors.username && (
+						<span className={styles.form__validateInfo}>{this.validationMessages.emptyUsername}</span>
+					)}
 					{this.props.isRegister ? (
 						<FormItem
 							text="E-mail"
@@ -103,7 +104,9 @@ class Form extends Component {
 							handleInputChange={this.handleInputChange}
 						/>
 					) : null}
-					{this.state.errors.email && this.props.isRegister && <span className="form__validateInfo">{this.validationMessages.noEmail}</span>}
+					{this.state.errors.email && this.props.isRegister && (
+						<span className={styles.form__validateInfo}>{this.validationMessages.noEmail}</span>
+					)}
 					<FormItem
 						text="Password"
 						id="password"
@@ -112,7 +115,9 @@ class Form extends Component {
 						value={this.state.password}
 						handleInputChange={this.handleInputChange}
 					/>
-					{this.state.errors.password && <span className="form__validateInfo">{this.validationMessages.noPassword}</span>}
+					{this.state.errors.password && (
+						<span className={styles.form__validateInfo}>{this.validationMessages.noPassword}</span>
+					)}
 					<Button text={this.props.btnText} />
 				</form>
 			</div>

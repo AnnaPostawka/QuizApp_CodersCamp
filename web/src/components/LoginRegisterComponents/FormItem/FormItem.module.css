@@ -54,7 +54,7 @@
 		font-size: 18px;
 	}
 	.form__input:focus ~ .form__label,
-	.form__input:not(:placeholder-shown)~ .form__label {
+	.form__input:not(:placeholder-shown) ~ .form__label {
 		transform: translate(-8px, -17px) scale(0.9);
 	}
 }

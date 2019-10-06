@@ -1,13 +1,13 @@
 import React from "react";
-import "./FormItem.css";
+import styles from "./FormItem.module.css";
 
 const FormItem = props => {
 	const { text, id, name, type, value, handleInputChange } = props;
 	return (
-		<div className="form__group">
+		<div className={styles.form__group}>
 			<input
 				placeholder="&nbsp;"
-				className="form__input"
+				className={styles.form__input}
 				id={id}
 				name={name}
 				type={type}
@@ -15,8 +15,8 @@ const FormItem = props => {
 				onChange={handleInputChange}
 				required
 			/>
-			<span className="form__span"></span>
-			<label className="form__label" htmlFor={name}>
+			<span className={styles.form__span}></span>
+			<label className={styles.form__label} htmlFor={name}>
 				{text}
 			</label>
 		</div>

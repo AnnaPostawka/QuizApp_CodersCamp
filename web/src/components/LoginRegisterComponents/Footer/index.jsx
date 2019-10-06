@@ -1,12 +1,12 @@
 import React from "react";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
 
 const Footer = ({ linkText, linkPath, text }) => {
 	return (
-		<div className="footer">
+		<div className={styles.footer}>
 			{text}
-			<NavLink className="footer__link" to={linkPath}>
+			<NavLink className={styles.footer__link} to={linkPath}>
 				{linkText}
 			</NavLink>
 		</div>

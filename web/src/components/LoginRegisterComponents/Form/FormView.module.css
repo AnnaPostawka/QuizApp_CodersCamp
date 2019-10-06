@@ -9,7 +9,7 @@
 .form {
 	width: 324px;
 }
-.form__validateInfo{
+.form__validateInfo {
 	position: relative;
 	color: red;
 	font-weight: bold;
