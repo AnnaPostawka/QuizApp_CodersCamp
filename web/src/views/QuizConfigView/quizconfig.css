@@ -55,9 +55,3 @@
 		grid-template-rows: min-content;
 	}
 }
-
-/*controls*/
-.button {
-    padding: 10px;
-    height: unset;
-}

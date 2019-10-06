@@ -1,4 +1,4 @@
-import "antd/dist/antd.css";
+//import "antd/dist/antd.css";
 import "./quizconfig.css";
 import React, { Component } from "react";
 import {Button, PageHeader} from "antd";
