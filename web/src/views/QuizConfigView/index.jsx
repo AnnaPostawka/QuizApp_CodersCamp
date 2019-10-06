@@ -1,10 +1,12 @@
 import "antd/dist/antd.css";
+import "./quizconfig.css";
 import React, { Component } from "react";
-import {Button} from "antd";
+import {Button, PageHeader} from "antd";
 import QuizOptionWrapper from "./quizOptionWrapper";
 import QuizOptionSelect from "./quizOptionSelect";
 import QuizOptionRadio from "./quizOptionRadio";
 import QuizOptionNumberPicker from "./quizOptionNumberPicker";
+import QuizConfigWrapper from "./quizConfigWrapper";
 
 export default class QuizConfigView extends Component {
 	constructor(props){
@@ -92,49 +94,52 @@ export default class QuizConfigView extends Component {
 
 	render() {
 		return (
-		<div>
-			<QuizOptionWrapper title="Number of questions">
-				<QuizOptionNumberPicker
-								min={1}
-								max={50}
-								default={10}
-								optionKey="questionsNumber"
-								onOptionChange={this.onConfigOptionChange.bind(this)}
-				/>
-			</QuizOptionWrapper>
+		<div className="layout">
+			<PageHeader title="Back" className="back" onBack />
+			<QuizConfigWrapper title="Quiz Configuration">
+				<QuizOptionWrapper title="Number of questions">
+					<QuizOptionNumberPicker
+									min={1}
+									max={50}
+									default={10}
+									optionKey="questionsNumber"
+									onOptionChange={this.onConfigOptionChange.bind(this)}
+					/>
+				</QuizOptionWrapper>
 
-			<QuizOptionWrapper title="Category">
-				<QuizOptionSelect 
-								optionKey="category"
-								selected={this.state.category}
-								options={this.categories}
-								onOptionChange={this.onConfigOptionChange.bind(this)}
-				/>
-			</QuizOptionWrapper>
+				<QuizOptionWrapper title="Category">
+					<QuizOptionSelect 
+									optionKey="category"
+									selected={this.state.category}
+									options={this.categories}
+									onOptionChange={this.onConfigOptionChange.bind(this)}
+					/>
+				</QuizOptionWrapper>
 
-			<QuizOptionWrapper title="Difficulty">
-				<QuizOptionRadio 
-								optionKey="difficulty"
-								selected={this.state.difficulty}
-								options={this.difficulties}
-								onOptionChange={this.onConfigOptionChange.bind(this)} 
-				/>
-			</QuizOptionWrapper>
+				<QuizOptionWrapper title="Difficulty">
+					<QuizOptionRadio 
+									optionKey="difficulty"
+									selected={this.state.difficulty}
+									options={this.difficulties}
+									onOptionChange={this.onConfigOptionChange.bind(this)} 
+					/>
+				</QuizOptionWrapper>
 
-			<QuizOptionWrapper title="Question type">
-				<QuizOptionRadio
-								optionKey="type"
-								selected={this.state.type}
-								options={this.questionTypes}
-								onOptionChange={this.onConfigOptionChange.bind(this)} 
-				/>
-			</QuizOptionWrapper>
+				<QuizOptionWrapper title="Question type">
+					<QuizOptionRadio
+									optionKey="type"
+									selected={this.state.type}
+									options={this.questionTypes}
+									onOptionChange={this.onConfigOptionChange.bind(this)} 
+					/>
+				</QuizOptionWrapper>
 
-			<QuizOptionWrapper>
-				<Button type="primary" onClick={this.onConfirmButtonClick.bind(this)}>
-					Create quiz!
-				</Button>
-			</QuizOptionWrapper>
+				<QuizOptionWrapper>
+					<Button type="primary" block="true" onClick={this.onConfirmButtonClick.bind(this)}>
+						Create quiz!
+					</Button>
+				</QuizOptionWrapper>
+			</QuizConfigWrapper>
 		</div>
 		);
 	}
