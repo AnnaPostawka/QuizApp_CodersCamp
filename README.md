@@ -11,6 +11,6 @@ Created as one of the projects during CodersCamp 2019 - a web development bootca
 - Ant Design
 - Open Trivia Database API
 
-![Quiz App screenshot](screenshots/quiz1)
+![Quiz App screenshot](screenshots/quiz1.PNG)
 
-![Quiz App screenshot](screenshots/quiz2)
+![Quiz App screenshot](screenshots/quiz2.PNG)
